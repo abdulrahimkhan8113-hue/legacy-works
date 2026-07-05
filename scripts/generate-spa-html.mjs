@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Postbuild: generate a static SPA index.html in dist/client so the app
+ * Postbuild: generate a static SPA index.html in the built client output so the app
  * can be deployed to static hosts without relying on the SSR worker output.
  * The client bundle hydrates from scratch and router navigation works via
  * the platform rewrite fallback.
@@ -10,14 +10,18 @@ import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const clientDir = resolve(__dirname, "..", "dist", "client");
-const assetsDir = join(clientDir, "assets");
-const manifestPath = join(clientDir, ".vite", "manifest.json");
+const distDir = resolve(__dirname, "..", "dist");
+const candidateClientDirs = [distDir, join(distDir, "client")];
+const clientDir = candidateClientDirs.find((dir) =>
+  existsSync(join(dir, "assets")) && existsSync(join(dir, ".vite", "manifest.json")),
+);
 
-if (!existsSync(assetsDir) || !existsSync(manifestPath)) {
-  console.error("[spa-html] dist/client assets or manifest not found — run `vite build` first.");
+if (!clientDir) {
+  console.error("[spa-html] built assets or manifest not found — run `vite build --config vite.spa.config.ts` first.");
   process.exit(1);
 }
+
+const manifestPath = join(clientDir, ".vite", "manifest.json");
 
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 const manifestEntries = Object.values(manifest);
@@ -26,7 +30,7 @@ const entryJs = entry?.file;
 const entryCss = Array.isArray(entry?.css) ? entry.css[0] : undefined;
 
 if (!entryJs) {
-  console.error("[spa-html] Could not find a client entry in dist/client/.vite/manifest.json");
+  console.error(`[spa-html] Could not find a client entry in ${manifestPath}`);
   process.exit(1);
 }
 
@@ -53,7 +57,7 @@ ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <scr
 `;
 
 writeFileSync(join(clientDir, "index.html"), html, "utf8");
-console.log(`[spa-html] Wrote dist/client/index.html (entry=${entryJs}${entryCss ? `, css=${entryCss}` : ""})`);
+console.log(`[spa-html] Wrote ${join(clientDir, "index.html")} (entry=${entryJs}${entryCss ? `, css=${entryCss}` : ""})`);
 
 // Copy public/ assets that the build may not auto-copy (defensive)
 const publicDir = resolve(__dirname, "..", "public");
