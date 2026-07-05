@@ -11,18 +11,17 @@ over routing on the client.
 Vercel, just confirm:
 
 - **Framework Preset:** Other
-- **Build Command:** `vite build && node scripts/generate-spa-html.mjs` (from `vercel.json`)
-- **Output Directory:** `dist/client` (from `vercel.json`)
-- **Install Command:** `npm install --legacy-peer-deps` (from `vercel.json`)
+- **Build Command:** `npm run build:vercel` (from `vercel.json`)
+- **Output Directory:** `dist` (from `vercel.json`)
+- **Install Command:** `npm install --legacy-peer-deps --include=dev` (from `vercel.json`)
 
 Click **Deploy**. No environment variables are required.
 
 ## How it works (no 404, no blank screen)
 
-1. `vite build` produces the client bundle in `dist/client/assets/` and a
-   server bundle in `dist/server/` (which Vercel ignores).
-2. `scripts/generate-spa-html.mjs` writes `dist/client/index.html` that
-   loads the hashed `main-*.js` entry and the compiled CSS.
+1. `npm run build:vercel` runs the pure SPA Vite config and writes
+   `dist/index.html` plus hashed files in `dist/assets/`.
+2. The build command checks that `dist/index.html` exists before Vercel deploys.
 3. `vercel.json` rewrites every non-asset path (anything not under
    `/assets/` and not ending in a file extension) to `/index.html`, so deep
    links like `/services/hot-insulation`, `/projects`, `/certificates` work
@@ -33,9 +32,8 @@ Click **Deploy**. No environment variables are required.
 
 ```bash
 npm install --legacy-peer-deps
-npm run build
-node scripts/generate-spa-html.mjs
-npx serve dist/client            # or any static server
+npm run build:vercel
+npx serve dist                   # or any static server
 ```
 
 Visit `http://localhost:3000/projects` and refresh — the SPA shell loads,
@@ -44,7 +42,7 @@ the bundle hydrates, and the route renders. No 404.
 ## Files included for deployment
 
 - `vercel.json` — build, output, rewrites, cache headers
-- `scripts/generate-spa-html.mjs` — generates the SPA `index.html`
+- `vite.spa.config.ts` — builds the static SPA bundle for Vercel
 - `.vercelignore` — excludes local artifacts
 - `package.json` / lockfile, `vite.config.ts`, `tsconfig.json`
 - `src/**`, `public/**`
