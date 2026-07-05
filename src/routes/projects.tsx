@@ -114,7 +114,7 @@
 
 
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft, MapPin, Calendar } from "lucide-react";
 import { projects, type Project } from "@/lib/site-data";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
@@ -180,70 +180,61 @@ function ProjectsPage() {
   );
 }
 
-// Fixed & Robust ProjectModal Component
+// Robust ProjectModal — no state caching, resilient to unmount races
 export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
-  // Fix: Cache the last non-null project configuration to prevent data teardown crashing while exiting animations are executing
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-
-  useEffect(() => {
-    if (project) {
-      setActiveProject(project);
-    }
-  }, [project]);
-
   const handleOpenChange = (open: boolean) => {
     if (!open) {
       onClose();
+      // Safety: clear any stuck pointer-events lock Radix may leave behind
+      setTimeout(() => {
+        if (typeof document !== "undefined") {
+          document.body.style.pointerEvents = "";
+          document.body.style.removeProperty("pointer-events");
+        }
+      }, 300);
     }
   };
 
-  const displayProject = project || activeProject;
+  if (!project) return null;
 
   return (
     <Dialog open={!!project} onOpenChange={handleOpenChange}>
-      {/* Responsive Fix: Max height constraints for crisp fluid scrolling across mobile device aspect ratios */}
       <DialogContent className="w-[95vw] sm:w-[90vw] max-w-4xl p-0 overflow-y-auto max-h-[90vh] md:max-h-[92vh] rounded-2xl border border-border/60 bg-card">
-        {displayProject && (
-          <div className="flex flex-col md:grid md:grid-cols-2 w-full">
-            
-            {/* Image Section: Adapts dynamically from a horizontal block to structural columns based on viewport profile */}
-            <div className="relative bg-secondary/10 w-full h-[35vh] md:h-full min-h-[220px] md:max-h-[85vh]">
-              <img
-                src={displayProject.image}
-                alt={displayProject.title}
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            
-            {/* Content Details Section */}
-            <div className="space-y-5 p-6 sm:p-8 flex flex-col justify-center w-full">
-              <DialogHeader className="space-y-2 text-left">
-                <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
-                  <MapPin className="h-3.5 w-3.5" /> {displayProject.city}
-                </div>
-                <DialogTitle className="font-display text-xl font-semibold leading-tight sm:text-2xl text-foreground">
-                  {displayProject.title}
-                </DialogTitle>
-                {displayProject.year && (
-                  <DialogDescription className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-copper">
-                    <Calendar className="h-3.5 w-3.5" /> {displayProject.year}
-                  </DialogDescription>
-                )}
-              </DialogHeader>
-
-              <p className="text-sm leading-relaxed text-foreground/85">
-                {displayProject.description ??
-                  "A representative deployment of the Tayeb Standard — insulation, ductwork and HVAC engineering executed end-to-end with our in-house fabrication and field teams."}
-              </p>
-
-              <div className="rounded-xl border border-copper/20 bg-secondary/20 p-4 text-xs sm:text-sm leading-relaxed text-foreground/80">
-                Part of 1000+ industrial projects delivered nationwide since 1983 — engineered, installed and signed off to the Tayeb Standard.
-              </div>
-            </div>
-
+        <div className="flex flex-col md:grid md:grid-cols-2 w-full">
+          <div className="relative bg-secondary/10 w-full h-[240px] sm:h-[320px] md:h-auto md:min-h-[400px]">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
-        )}
+
+          <div className="space-y-5 p-6 sm:p-8 flex flex-col justify-center w-full min-w-0">
+            <DialogHeader className="space-y-2 text-left">
+              <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
+                <MapPin className="h-3.5 w-3.5" /> {project.city}
+              </div>
+              <DialogTitle className="font-display text-xl font-semibold leading-tight sm:text-2xl text-foreground break-words">
+                {project.title}
+              </DialogTitle>
+              {project.year && (
+                <DialogDescription className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-copper">
+                  <Calendar className="h-3.5 w-3.5" /> {project.year}
+                </DialogDescription>
+              )}
+            </DialogHeader>
+
+            <p className="text-sm leading-relaxed text-foreground/85 break-words">
+              {project.description ??
+                "A representative deployment of the Tayeb Standard — insulation, ductwork and HVAC engineering executed end-to-end with our in-house fabrication and field teams."}
+            </p>
+
+            <div className="rounded-xl border border-copper/20 bg-secondary/20 p-4 text-xs sm:text-sm leading-relaxed text-foreground/80">
+              Part of 1000+ industrial projects delivered nationwide since 1983 — engineered, installed and signed off to the Tayeb Standard.
+            </div>
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   );

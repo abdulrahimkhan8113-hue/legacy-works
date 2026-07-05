@@ -135,6 +135,8 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   body {
@@ -144,7 +146,15 @@
     font-feature-settings: "ss01", "cv11";
     /* Prevent horizontal scroll on small devices caused by 100vw or large fixed elements */
     overflow-x: hidden;
+    max-width: 100vw;
   }
+
+  /* Safety net: never allow a stuck pointer-events lock from a portalled modal
+     to freeze the entire site (Radix Dialog scroll-lock bug on some builds). */
+  body[style*="pointer-events: none"] {
+    pointer-events: auto !important;
+  }
+
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
