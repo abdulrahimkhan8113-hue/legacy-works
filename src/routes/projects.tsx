@@ -114,7 +114,7 @@
 
 
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft, MapPin, Calendar } from "lucide-react";
 import { projects, type Project } from "@/lib/site-data";
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
