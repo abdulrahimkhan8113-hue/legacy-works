@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Award, ArrowRight, ShieldCheck, MapPin, Calendar, FileText } from "lucide-react";
+import { Award, ArrowRight, ShieldCheck, MapPin, Calendar, FileText, X } from "lucide-react";
 import { certificates, type Certificate } from "@/lib/site-data";
-import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogHeader } from "@/components/ui/dialog";
 
 export function CertificatesStrip() {
   const featured = certificates.slice(0, 5);
@@ -73,55 +72,80 @@ export function CertificatesStrip() {
 }
 
 export function CertificateModal({ cert, onClose }: { cert: Certificate | null; onClose: () => void }) {
+  useEffect(() => {
+    if (!cert) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      document.body.style.removeProperty("pointer-events");
+    };
+  }, [cert, onClose]);
+
+  if (!cert) return null;
+
   return (
-    <Dialog open={!!cert} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="max-h-[92vh] max-w-4xl overflow-y-auto p-0">
-        {cert && (
-          <div className="grid gap-0 md:grid-cols-2">
-            <div className="relative bg-secondary/40">
-              <img
-                src={cert.image}
-                alt={`${cert.client} certificate`}
-                className="h-full max-h-[80vh] w-full object-contain"
-              />
+    <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-deep/85 px-3 py-4 backdrop-blur-sm sm:px-6" role="presentation" onMouseDown={onClose}>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="certificate-modal-title"
+        className="relative grid max-h-[90dvh] w-full max-w-4xl overflow-hidden rounded-2xl border border-border/70 bg-card shadow-elevated md:grid-cols-2"
+        onMouseDown={(event) => event.stopPropagation()}
+      >
+        <button
+          type="button"
+          aria-label="Close certificate details"
+          onClick={onClose}
+          className="absolute right-3 top-3 z-10 grid h-8 w-8 place-items-center rounded-full border border-copper/40 bg-background/90 text-copper shadow-elevated transition hover:bg-secondary"
+        >
+          <X className="h-4 w-4" />
+        </button>
+
+        <div className="relative min-h-[260px] min-w-0 bg-secondary/20 sm:min-h-[420px]">
+          <img src={cert.image} alt={`${cert.client} certificate`} className="h-full max-h-[82dvh] w-full object-contain" loading="eager" />
+        </div>
+
+        <div className="min-w-0 space-y-5 overflow-y-auto p-5 pt-12 sm:p-8 sm:pt-12">
+          <header className="space-y-2 text-left">
+            <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
+              <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> Verified Certificate
             </div>
-            <div className="space-y-5 p-6 sm:p-8">
-              <DialogHeader className="space-y-2 text-left">
-                <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
-                  <ShieldCheck className="h-3.5 w-3.5" /> Verified Certificate
-                </div>
-                <DialogTitle className="font-display text-xl font-semibold leading-tight sm:text-2xl">
-                  {cert.client}
-                </DialogTitle>
-                <DialogDescription className="text-xs uppercase tracking-[0.25em] text-copper">
-                  {cert.industry}
-                </DialogDescription>
-              </DialogHeader>
+            <h2 id="certificate-modal-title" className="break-words font-display text-xl font-semibold leading-tight sm:text-2xl">
+              {cert.client}
+            </h2>
+            <div className="text-xs uppercase tracking-[0.25em] text-copper">{cert.industry}</div>
+          </header>
 
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center gap-3 text-foreground/85">
-                  <MapPin className="h-4 w-4 text-copper" />
-                  <span>{cert.city}</span>
-                </div>
-                <div className="flex items-center gap-3 text-foreground/85">
-                  <Calendar className="h-4 w-4 text-copper" />
-                  <span>{cert.date}</span>
-                </div>
-                <div className="flex items-start gap-3 text-foreground/85">
-                  <FileText className="h-4 w-4 shrink-0 text-copper mt-0.5" />
-                  <span>{cert.scope}</span>
-                </div>
-              </div>
-
-              <div className="rounded-xl border border-copper/30 bg-secondary/40 p-4 text-sm leading-relaxed text-foreground/85">
-                A client-issued performance letter confirming Tayeb &amp; Company's
-                engineering, installation and handover quality on this project — one of
-                1000+ deployments delivered nationwide since 1983.
-              </div>
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center gap-3 text-foreground/85">
+              <MapPin className="h-4 w-4 shrink-0 text-copper" />
+              <span>{cert.city}</span>
+            </div>
+            <div className="flex items-center gap-3 text-foreground/85">
+              <Calendar className="h-4 w-4 shrink-0 text-copper" />
+              <span>{cert.date}</span>
+            </div>
+            <div className="flex items-start gap-3 text-foreground/85">
+              <FileText className="mt-0.5 h-4 w-4 shrink-0 text-copper" />
+              <span className="break-words">{cert.scope}</span>
             </div>
           </div>
-        )}
-      </DialogContent>
-    </Dialog>
+
+          <div className="rounded-xl border border-copper/30 bg-secondary/40 p-4 text-sm leading-relaxed text-foreground/85">
+            A client-issued performance letter confirming Tayeb &amp; Company's engineering, installation and handover quality on this project — one of 1000+ deployments delivered nationwide since 1983.
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { projects, type Project } from "@/lib/site-data";
-import { ProjectModal } from "@/routes/projects";
+import { ProjectModal } from "@/components/project-modal";
 
 export function FeaturedProjects() {
   const [active, setActive] = useState<Project | null>(null);
