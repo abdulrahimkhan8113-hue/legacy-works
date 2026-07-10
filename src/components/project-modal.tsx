@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Calendar, MapPin, X } from "lucide-react";
+import { MapPin, X } from "lucide-react";
 import type { Project } from "@/lib/site-data";
 
 export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
