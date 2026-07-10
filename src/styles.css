@@ -212,6 +212,19 @@
     border-color: color-mix(in oklab, var(--copper) 40%, transparent);
   }
 
+  /* Certificate image frame: keeps the baked-in Tayeb watermark visible in light mode
+     by adding contrast, a soft border and lift-off shadow around the white paper. */
+  .certificate-frame {
+    border: 1px solid color-mix(in oklab, var(--color-border) 70%, transparent);
+    box-shadow: 0 1px 2px oklch(0 0 0 / 0.04), 0 4px 12px oklch(0 0 0 / 0.06);
+  }
+  .certificate-frame img {
+    filter: contrast(1.06) brightness(0.99);
+  }
+  .dark .certificate-frame img {
+    filter: contrast(1);
+  }
+
   /* Polished steel shimmer button */
   .btn-shimmer {
     position: relative;

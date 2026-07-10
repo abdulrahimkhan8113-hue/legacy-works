@@ -57,7 +57,7 @@ export function FeaturedProjects() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-display text-sm font-semibold sm:text-base">{p.title}</h3>
-                  <p className="mt-1 text-xs text-muted-foreground">{p.year} · Click for details</p>
+                  <p className="mt-1 text-xs text-muted-foreground">Click for details</p>
                 </div>
               </button>
             </motion.div>
