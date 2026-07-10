@@ -55,7 +55,7 @@ function CertificatesPage() {
               onClick={() => setActive(cert)}
               className="group overflow-hidden rounded-2xl border border-border bg-card text-left shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow"
             >
-              <div className="relative aspect-[3/4] overflow-hidden bg-secondary/30">
+              <div className="certificate-frame relative aspect-[3/4] overflow-hidden bg-secondary/30">
                 <img
                   src={cert.image}
                   alt={`${cert.client} performance certificate`}

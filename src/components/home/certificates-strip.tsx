@@ -42,7 +42,7 @@ export function CertificatesStrip() {
               onClick={() => setActive(cert)}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card text-left shadow-elevated transition-all hover:border-copper/60 hover:shadow-glow"
             >
-              <div className="relative aspect-[3/4] overflow-hidden bg-secondary/40">
+              <div className="certificate-frame relative aspect-[3/4] overflow-hidden bg-secondary/40">
                 <img
                   src={cert.image}
                   alt={`${cert.client} certificate`}
@@ -111,7 +111,7 @@ export function CertificateModal({ cert, onClose }: { cert: Certificate | null; 
           <X className="h-4 w-4" />
         </button>
 
-        <div className="relative min-h-[260px] min-w-0 bg-secondary/20 sm:min-h-[420px]">
+        <div className="certificate-frame relative min-h-[260px] min-w-0 bg-secondary/20 sm:min-h-[420px]">
           <img src={cert.image} alt={`${cert.client} certificate`} className="h-full max-h-[82dvh] w-full object-contain" loading="eager" />
         </div>
 
