@@ -54,11 +54,6 @@ export function ProjectModal({ project, onClose }: { project: Project | null; on
             <h2 id="project-modal-title" className="break-words font-display text-xl font-semibold leading-tight text-foreground sm:text-2xl">
               {project.title}
             </h2>
-            {project.year && (
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-copper">
-                <Calendar className="h-3.5 w-3.5 shrink-0" /> {project.year}
-              </div>
-            )}
           </header>
 
           <p className="break-words text-sm leading-relaxed text-foreground/85">

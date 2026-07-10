@@ -52,7 +52,7 @@ function ProjectsPage() {
               <div className="p-5">
                 <h3 className="font-display text-base font-semibold sm:text-lg line-clamp-1">{p.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  {p.year ? `${p.year} · ` : ""}Engineered &amp; installed by the Tayeb team.
+                  Engineered &amp; installed by the Tayeb team.
                 </p>
               </div>
             </button>
