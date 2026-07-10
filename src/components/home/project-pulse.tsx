@@ -191,11 +191,6 @@ export function ProjectPulse() {
                         <h3 className="font-display text-lg font-semibold sm:text-xl break-words whitespace-normal">
                           {activeProject.title}
                         </h3>
-                        {activeProject.year && (
-                          <div className="mt-1 text-[10px] uppercase tracking-[0.3em] text-copper">
-                            {activeProject.year}
-                          </div>
-                        )}
                         <p className="mt-3 text-sm text-foreground/80 break-words">
                           Representative engineering deployment delivered to the Tayeb Standard.
                           Part of {stats.projectsDelivered} projects executed nationwide.
