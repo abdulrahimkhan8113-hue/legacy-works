@@ -490,13 +490,4 @@ export const certificates: Certificate[] = [
     scope: "Insulation and duct work at rice mills",
     image: certSafia,
   },
-  {
-    id: "ntn-fbr",
-    client: "Tayeb & Company — FBR Taxpayer Registration",
-    industry: "Government / Compliance",
-    city: "Multan",
-    date: "05 Oct 2020",
-    scope: "Federal Board of Revenue Taxpayer Registration Certificate (NTN: 4230126239547) issued under Section 181C of the Income Tax Ordinance 2001.",
-    image: certNtn,
-  },
 ];
