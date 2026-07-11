@@ -28,7 +28,7 @@ function ProjectsPage() {
         <div className="mt-6 max-w-3xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Selected Work</div>
           <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-5xl">
-            Forty years, one nation, countless plants.
+            44+ years, one nation, countless plants.
           </h1>
           <p className="mt-5 text-base text-foreground/80 sm:text-lg">
             A growing portfolio of thermal insulation, ductwork and HVAC engineering across Pakistan's industrial corridors. Click any project for details.
