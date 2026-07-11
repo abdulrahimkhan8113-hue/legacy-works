@@ -104,7 +104,7 @@ export function SiteHeader() {
 
           {[
             { to: "/projects" as const, label: "Projects" },
-            { to: "/certificates" as const, label: "Certificates" },
+            { to: "/certificates" as const, label: "Achievements" },
             { to: "/about" as const, label: "About Us" },
             { to: "/contact" as const, label: "Contact" },
           ].map((l) => (
