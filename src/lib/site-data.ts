@@ -384,7 +384,7 @@ export const cities = [
 export const team = [
   { name: "Zulfiqar Ali Qureshi (Late)", role: "Founder", bio: "Established Tayeb & Company in 1983 with a singular standard of precision." },
   { name: "Shamas Tayeb", role: "Chief Executive Officer", bio: "Stewards the Tayeb legacy into a new era of nationwide engineering excellence." },
-  { name: "Muhammad Nasir Farooq", role: "General Manager", bio: "Leads field operations across Pakistan with four decades of cumulative expertise." },
+  { name: "Muhammad Nasir Farooq", role: "General Manager", bio: "Leads field operations across Pakistan with 44+ years of cumulative expertise." },
 ];
 
 export const contact = {
