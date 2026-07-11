@@ -390,7 +390,20 @@ export const team = [
 export const contact = {
   address: "Bismillah Town, Bahawalpur Bypass Chowk, Multan",
   phones: ["0300 6346506", "0300 7382695"],
+  email: "shamas.ceo@tayebcompany.com",
   tagline: "Nationwide Scale. World-Class Engineering.",
+};
+
+// Government / tax registration (shown separately from client achievements)
+export const governmentRegistration = {
+  authority: "Federal Board of Revenue (FBR), Pakistan",
+  title: "Taxpayer Registration Certificate",
+  ntn: "4230126239547",
+  registrationDate: "05 Oct 2020",
+  taxOffice: "RTO Multan",
+  registeredName: "Shamas Tayeb",
+  section: "Section 181C of the Income Tax Ordinance 2001",
+  image: certNtn,
 };
 
 // Headline stats — visible across home, footer, hero
