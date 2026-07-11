@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { MapPin, Phone, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
 import { contact } from "@/lib/site-data";
 
 export const Route = createFileRoute("/contact")({
@@ -82,6 +82,13 @@ function ContactPage() {
                       <li key={p}><a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-copper">{p}</a></li>
                     ))}
                   </ul>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                <div className="min-w-0">
+                  <div className="text-xs font-semibold uppercase tracking-widest text-copper">Email</div>
+                  <a href={`mailto:${contact.email}`} className="mt-1 block break-all text-sm text-foreground/85 hover:text-copper">{contact.email}</a>
                 </div>
               </div>
             </div>

@@ -24,7 +24,7 @@ function ServicesPage() {
             Six disciplines. One uncompromising standard.
           </h1>
           <p className="mt-6 text-lg text-foreground/75">
-            Each service is delivered by site-experienced teams trained in the Tayeb method — the same method that has shaped Pakistan's plant rooms for forty years.
+            Each service is delivered by site-experienced teams trained in the Tayeb method — the same method that has shaped Pakistan's plant rooms for 44+ years.
           </p>
         </div>
 

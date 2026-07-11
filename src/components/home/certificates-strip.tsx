@@ -17,17 +17,17 @@ export function CertificatesStrip() {
               <Award className="h-3.5 w-3.5" /> Trusted by industry
             </div>
             <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-4xl">
-              Performance certificates from clients we serve.
+              Achievements from clients we serve.
             </h2>
             <p className="mt-3 text-sm text-foreground/80 sm:text-base">
-              Two decades of "To Whom It May Concern" letters from Pakistan's leading mills, refineries and chemical plants — every project signed off, every standard met.
+              Client-issued "To Whom It May Concern" letters from Pakistan's leading mills, refineries and chemical plants — every project signed off, every standard met.
             </p>
           </div>
           <Link
             to="/certificates"
             className="btn-cta inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
           >
-            View all certificates <ArrowRight className="h-4 w-4" />
+            View all achievements <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -118,7 +118,7 @@ export function CertificateModal({ cert, onClose }: { cert: Certificate | null; 
         <div className="min-w-0 space-y-5 overflow-y-auto p-5 pt-12 sm:p-8 sm:pt-12">
           <header className="space-y-2 text-left">
             <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
-              <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> Verified Certificate
+              <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> Verified Achievement
             </div>
             <h2 id="certificate-modal-title" className="break-words font-display text-xl font-semibold leading-tight sm:text-2xl">
               {cert.client}

@@ -13,9 +13,9 @@ export function MissionVision() {
     {
       icon: Target,
       label: "Mission",
-      title: "Forty years of expertise, applied to every sub-task.",
+      title: "44+ years of expertise, applied to every sub-task.",
       body:
-        "Established in 1983, Tayeb & Company is dedicated to delivering specialized, large-scale HVAC and thermal insulation solutions across Pakistan. By meticulously managing every technical sub-task with forty years of expertise, we safeguard our clients' assets and optimize energy efficiency for a sustainable future.",
+        "Building trust since 1983, Tayeb & Company is dedicated to delivering specialized, large-scale HVAC and thermal insulation solutions across Pakistan. By meticulously managing every technical sub-task with 44+ years of expertise, we safeguard our clients' assets and optimize energy efficiency for a sustainable future.",
     },
   ];
 

@@ -384,13 +384,26 @@ export const cities = [
 export const team = [
   { name: "Zulfiqar Ali Qureshi (Late)", role: "Founder", bio: "Established Tayeb & Company in 1983 with a singular standard of precision." },
   { name: "Shamas Tayeb", role: "Chief Executive Officer", bio: "Stewards the Tayeb legacy into a new era of nationwide engineering excellence." },
-  { name: "Muhammad Nasir Farooq", role: "General Manager", bio: "Leads field operations across Pakistan with four decades of cumulative expertise." },
+  { name: "Muhammad Nasir Farooq", role: "General Manager", bio: "Leads field operations across Pakistan with 44+ years of cumulative expertise." },
 ];
 
 export const contact = {
   address: "Bismillah Town, Bahawalpur Bypass Chowk, Multan",
   phones: ["0300 6346506", "0300 7382695"],
+  email: "shamas.ceo@tayebcompany.com",
   tagline: "Nationwide Scale. World-Class Engineering.",
+};
+
+// Government / tax registration (shown separately from client achievements)
+export const governmentRegistration = {
+  authority: "Federal Board of Revenue (FBR), Pakistan",
+  title: "Taxpayer Registration Certificate",
+  ntn: "4230126239547",
+  registrationDate: "05 Oct 2020",
+  taxOffice: "RTO Multan",
+  registeredName: "Shamas Tayeb",
+  section: "Section 181C of the Income Tax Ordinance 2001",
+  image: certNtn,
 };
 
 // Headline stats — visible across home, footer, hero
@@ -476,14 +489,5 @@ export const certificates: Certificate[] = [
     date: "08 Oct 2024",
     scope: "Insulation and duct work at rice mills",
     image: certSafia,
-  },
-  {
-    id: "ntn-fbr",
-    client: "Tayeb & Company — FBR Taxpayer Registration",
-    industry: "Government / Compliance",
-    city: "Multan",
-    date: "05 Oct 2020",
-    scope: "Federal Board of Revenue Taxpayer Registration Certificate (NTN: 4230126239547) issued under Section 181C of the Income Tax Ordinance 2001.",
-    image: certNtn,
   },
 ];

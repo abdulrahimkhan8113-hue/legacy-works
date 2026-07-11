@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { contact, services } from "@/lib/site-data";
 import logo from "@/assets/logo-tayeb.png";
 import WhatsappFAB from "@/components/ui/whatsapp-fab";
@@ -41,7 +41,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link to="/about" className="text-foreground/70 hover:text-foreground">About Us</Link></li>
               <li><Link to="/projects" className="text-foreground/70 hover:text-foreground">Projects</Link></li>
-              <li><Link to="/certificates" className="text-foreground/70 hover:text-foreground">Certificates</Link></li>
+              <li><Link to="/certificates" className="text-foreground/70 hover:text-foreground">Achievements</Link></li>
               <li><Link to="/contact" className="text-foreground/70 hover:text-foreground">Contact</Link></li>
             </ul>
           </div>
@@ -53,6 +53,7 @@ export function SiteFooter() {
               {contact.phones.map((p) => (
                 <li key={p} className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-copper" /><a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-foreground">{p}</a></li>
               ))}
+              <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-copper" /><a href={`mailto:${contact.email}`} className="break-all hover:text-foreground">{contact.email}</a></li>
             </ul>
           </div>
         </div>

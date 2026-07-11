@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "lucide-react";
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
-import { team } from "@/lib/site-data";
+import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Tayeb & Company" },
-      { name: "description", content: "The story, leadership and standards behind Tayeb & Company's four-decade engineering legacy." },
+      { name: "description", content: "The story, leadership and standards behind Tayeb & Company — building trust since 1983." },
       { property: "og:title", content: "About Tayeb & Company" },
       { property: "og:description", content: "Founded 1983. The leadership and legacy behind Pakistan's industrial insulation specialists." },
     ],
@@ -33,13 +34,14 @@ function AboutPage() {
         <div className="max-w-3xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Our Story</div>
           <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight sm:text-6xl">
-            Forty years of trust, engineered into every joint.
+            Building Trust since 1983.
           </h1>
           <p className="mt-6 text-lg text-foreground/75">
-            Tayeb &amp; Company was established in 1983 in Multan with a single conviction — that thermal precision is, above all, a matter of trust. Four decades later, that conviction is the gold standard our engineers carry to every site.
+            Since 1983, Tayeb &amp; Company has been delivering trusted thermal insulation and industrial fabrication solutions across Pakistan. Our experienced teams specialize in Hot Insulation, Cold Insulation, Industrial Duct Work, Valve Box Fabrication, Flange Box Fabrication, and Motor Covers. Every project is executed with precision, quality, and a commitment to long-lasting performance, ensuring reliable solutions for industries nationwide.
           </p>
         </div>
       </section>
+
 
       {/* FOUNDER — featured */}
       {founderMember && (
@@ -99,13 +101,73 @@ function AboutPage() {
                 <p className="mt-3 text-sm leading-relaxed text-foreground/75">{m!.bio}</p>
                 <blockquote className="mt-5 border-l-2 border-copper/50 pl-4 text-sm italic text-foreground/80">
                   {m!.role === "Chief Executive Officer"
-                    ? "“We carry forty years of trust into every new project — modernised, but never compromised.”"
+                    ? "“We carry 44+ years of trust into every new project — modernised, but never compromised.”"
                     : "“Our field teams are the front line of the Tayeb Standard — discipline, every day, on every site.”"}
                 </blockquote>
               </div>
             </article>
           ))}
         </div>
+      </section>
+
+      {/* GOVERNMENT / TAX REGISTRATION */}
+      <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Government &amp; Taxation</div>
+        <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">Registered, compliant, verifiable.</h2>
+        <p className="mt-4 max-w-3xl text-foreground/75">
+          Tayeb &amp; Company is a registered taxpayer with the Federal Board of Revenue (FBR), Pakistan — full compliance documentation is available for review.
+        </p>
+
+        <article className="mt-8 overflow-hidden rounded-3xl border border-copper/30 bg-card shadow-elevated">
+          <div className="grid gap-0 lg:grid-cols-[minmax(280px,460px)_1fr]">
+            <div className="certificate-frame relative min-h-[320px] bg-secondary/30 lg:min-h-[480px]">
+              <img
+                src={governmentRegistration.image}
+                alt="FBR Taxpayer Registration Certificate"
+                className="absolute inset-0 h-full w-full object-contain p-4"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+              <div className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-copper">
+                <ShieldCheck className="h-3.5 w-3.5" /> Verified Registration
+              </div>
+              <h3 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">
+                {governmentRegistration.title}
+              </h3>
+              <div className="mt-2 text-sm text-foreground/70">{governmentRegistration.authority}</div>
+
+              <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+                <Detail icon={Hash} label="License / NTN" value={governmentRegistration.ntn} />
+                <Detail icon={Calendar} label="Date of Registration" value={governmentRegistration.registrationDate} />
+                <Detail icon={Landmark} label="Tax Office" value={governmentRegistration.taxOffice} />
+                <Detail icon={Building2} label="Registered Name" value={governmentRegistration.registeredName} />
+              </dl>
+
+              <div className="mt-5 rounded-xl border border-copper/25 bg-secondary/40 p-4 text-xs leading-relaxed text-foreground/80 sm:text-sm">
+                Issued under {governmentRegistration.section}.
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={governmentRegistration.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+                >
+                  <FileText className="h-4 w-4" /> View PDF Certificate
+                </a>
+                <a
+                  href={governmentRegistration.image}
+                  download
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground/80 hover:border-copper/60 hover:text-copper"
+                >
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -117,6 +179,18 @@ function AboutPage() {
           </p>
         </div>
       </section>
+    </div>
+  );
+}
+
+function Detail({ icon: Icon, label, value }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string }) {
+  return (
+    <div className="flex items-start gap-3">
+      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-copper" />
+      <div className="min-w-0">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">{label}</div>
+        <div className="mt-1 break-words text-sm font-medium text-foreground">{value}</div>
+      </div>
     </div>
   );
 }

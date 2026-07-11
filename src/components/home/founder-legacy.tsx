@@ -44,7 +44,7 @@ export function FounderLegacy() {
                 When I established Tayeb &amp; Company in 1983, my goal was simple but ambitious: to provide Pakistan's industrial sector with engineering solutions that were built to last. I believed then, as we do now, that in the world of thermal insulation and HVAC, there is no room for error. Precision is not just a technical requirement; it is a matter of trust.
               </p>
               <p className="pl-6">
-                For over four decades, we didn't just wrap pipes or install ducts; we built relationships based on the <em className="text-copper not-italic font-semibold">'Tayeb Standard'</em> — a commitment to quality that never compromises, no matter the scale of the challenge.
+                For over 44 years, we didn't just wrap pipes or install ducts; we built relationships based on the <em className="text-copper not-italic font-semibold">'Tayeb Standard'</em> — a commitment to quality that never compromises, no matter the scale of the challenge.
               </p>
             </blockquote>
 

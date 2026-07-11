@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       { title: "Tayeb & Company — A Legacy of Precision Since 1983" },
       { name: "description", content: "Pakistan's leading partner in thermal insulation, HVAC engineering, and industrial fabrication. Established 1983." },
       { property: "og:title", content: "Tayeb & Company — Industrial Engineering Legacy" },
-      { property: "og:description", content: "Forty years of precision engineering in thermal insulation and HVAC across Pakistan." },
+      { property: "og:description", content: "44+ years of precision engineering in thermal insulation and HVAC across Pakistan. Building trust since 1983." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

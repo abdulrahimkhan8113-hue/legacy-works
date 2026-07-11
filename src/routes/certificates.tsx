@@ -8,10 +8,10 @@ import { CertificateModal } from "@/components/home/certificates-strip";
 export const Route = createFileRoute("/certificates")({
   head: () => ({
     meta: [
-      { title: "Performance Certificates — Tayeb & Company" },
-      { name: "description", content: "Two decades of client-issued performance certificates documenting Tayeb & Company's insulation, ductwork and HVAC engineering across Pakistan." },
-      { property: "og:title", content: "Client Certificates — Tayeb & Company" },
-      { property: "og:description", content: "Verified performance letters from refineries, mills, and chemical plants across Pakistan." },
+      { title: "Achievements — Tayeb & Company" },
+      { name: "description", content: "Client-issued achievements documenting Tayeb & Company's insulation, ductwork and HVAC engineering across Pakistan." },
+      { property: "og:title", content: "Achievements — Tayeb & Company" },
+      { property: "og:description", content: "Verified achievement letters from refineries, mills, and chemical plants across Pakistan." },
     ],
   }),
   component: CertificatesPage,
@@ -27,17 +27,17 @@ function CertificatesPage() {
             <Award className="h-3.5 w-3.5" /> Verified by clients
           </div>
           <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-5xl">
-            Performance certificates, signed by the people we serve.
+            Achievements, signed by the people we serve.
           </h1>
           <p className="mt-5 text-base text-foreground/80 sm:text-lg">
-            For over forty years, Pakistan's leading industrial clients have signed off on our work.
-            Click any certificate below to view its full details.
+            Building trust since 1983, Pakistan's leading industrial clients have signed off on our work.
+            Click any achievement below to view its full details.
           </p>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3 sm:mt-12">
           <div className="inline-flex items-center gap-2 rounded-full border border-copper/40 bg-card px-4 py-2 text-xs font-semibold text-foreground">
-            <ShieldCheck className="h-4 w-4 text-copper" /> {certificates.length}+ archived certificates
+            <ShieldCheck className="h-4 w-4 text-copper" /> {certificates.length}+ archived achievements
           </div>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold text-foreground/80">
             Refineries · Mills · Chemicals · Power
