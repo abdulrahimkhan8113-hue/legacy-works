@@ -182,3 +182,15 @@ function AboutPage() {
     </div>
   );
 }
+
+function Detail({ icon: Icon, label, value }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string }) {
+  return (
+    <div className="flex items-start gap-3">
+      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-copper" />
+      <div className="min-w-0">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">{label}</div>
+        <div className="mt-1 break-words text-sm font-medium text-foreground">{value}</div>
+      </div>
+    </div>
+  );
+}
