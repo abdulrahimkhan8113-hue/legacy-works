@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { contact, services } from "@/lib/site-data";
 import logo from "@/assets/logo-tayeb.png";
 import WhatsappFAB from "@/components/ui/whatsapp-fab";
