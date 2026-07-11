@@ -84,6 +84,13 @@ function ContactPage() {
                   </ul>
                 </div>
               </div>
+              <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-copper" />
+                <div className="min-w-0">
+                  <div className="text-xs font-semibold uppercase tracking-widest text-copper">Email</div>
+                  <a href={`mailto:${contact.email}`} className="mt-1 block break-all text-sm text-foreground/85 hover:text-copper">{contact.email}</a>
+                </div>
+              </div>
             </div>
           </div>
 
