@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "lucide-react";
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
-import { team } from "@/lib/site-data";
+import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Tayeb & Company" },
-      { name: "description", content: "The story, leadership and standards behind Tayeb & Company's four-decade engineering legacy." },
+      { name: "description", content: "The story, leadership and standards behind Tayeb & Company — building trust since 1983." },
       { property: "og:title", content: "About Tayeb & Company" },
       { property: "og:description", content: "Founded 1983. The leadership and legacy behind Pakistan's industrial insulation specialists." },
     ],
@@ -33,13 +34,14 @@ function AboutPage() {
         <div className="max-w-3xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Our Story</div>
           <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight sm:text-6xl">
-            Forty years of trust, engineered into every joint.
+            Building Trust since 1983.
           </h1>
           <p className="mt-6 text-lg text-foreground/75">
-            Tayeb &amp; Company was established in 1983 in Multan with a single conviction — that thermal precision is, above all, a matter of trust. Four decades later, that conviction is the gold standard our engineers carry to every site.
+            Since 1983, Tayeb &amp; Company has been delivering trusted thermal insulation and industrial fabrication solutions across Pakistan. Our experienced teams specialize in Hot Insulation, Cold Insulation, Industrial Duct Work, Valve Box Fabrication, Flange Box Fabrication, and Motor Covers. Every project is executed with precision, quality, and a commitment to long-lasting performance, ensuring reliable solutions for industries nationwide.
           </p>
         </div>
       </section>
+
 
       {/* FOUNDER — featured */}
       {founderMember && (
