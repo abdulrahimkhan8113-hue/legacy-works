@@ -53,6 +53,7 @@ export function SiteFooter() {
               {contact.phones.map((p) => (
                 <li key={p} className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-copper" /><a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-foreground">{p}</a></li>
               ))}
+              <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-copper" /><a href={`mailto:${contact.email}`} className="break-all hover:text-foreground">{contact.email}</a></li>
             </ul>
           </div>
         </div>
