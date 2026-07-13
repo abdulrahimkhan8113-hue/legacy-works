@@ -33,14 +33,64 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Our Story</div>
-          <h1 className="mt-3 font-display text-5xl font-semibold tracking-tight sm:text-6xl">
-            Building Trust since 1983.
+          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+            Delivering Industrial Solutions Since 1983.
           </h1>
-          <p className="mt-6 text-lg text-foreground/75">
-            Since 1983, Tayeb &amp; Company has been delivering trusted thermal insulation and industrial fabrication solutions across Pakistan. Our experienced teams specialize in Hot Insulation, Cold Insulation, Industrial Duct Work, Valve Box Fabrication, Flange Box Fabrication, and Motor Covers. Every project is executed with precision, quality, and a commitment to long-lasting performance, ensuring reliable solutions for industries nationwide.
-          </p>
+          <div className="mt-6 space-y-5 text-base text-foreground/80 sm:text-lg">
+            <p>
+              Since 1983, Tayeb &amp; Company has been committed to one purpose: providing reliable, high-performance insulation and fabrication solutions for Pakistan's industries.
+            </p>
+            <p>
+              We understand that every industrial facility depends on efficiency, safety, and uninterrupted operations. That's why we deliver solutions that minimize energy loss, improve system performance, and ensure long-term reliability. Our work goes beyond insulation—we help industries operate smarter, safer, and more efficiently.
+            </p>
+            <p>
+              Over the past four decades, Tayeb &amp; Company has earned the trust of industrial clients by consistently delivering quality workmanship, technical expertise, and dependable service. From Hot Insulation and Cold Insulation to Industrial Duct Work, Valve Box, Flange Box, and Motor Cover Fabrication, every solution is engineered to meet the highest standards of performance.
+            </p>
+            <p>
+              With 1,000+ successfully completed projects across 80+ cities in Pakistan, we continue to support industries including power, cement, fertilizer, chemical, textile, food processing, pharmaceuticals, and manufacturing.
+            </p>
+            <p>
+              At Tayeb &amp; Company, we don't just complete projects—we build lasting partnerships by providing solutions that improve productivity, reduce energy costs, and create long-term value for our clients.
+            </p>
+          </div>
         </div>
       </section>
+
+      {/* MISSION / VISION / PROMISE */}
+      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-3">
+          {[
+            {
+              label: "Our Mission",
+              title: "Pakistan's most trusted partner.",
+              body: "To be Pakistan's most trusted industrial insulation and fabrication partner by delivering innovative, reliable, and cost-effective solutions that enhance efficiency, safety, and sustainability.",
+            },
+            {
+              label: "Our Vision",
+              title: "The benchmark for excellence.",
+              body: "To set the benchmark for excellence in industrial insulation and fabrication, empowering industries with world-class solutions that drive progress and long-term success.",
+            },
+            {
+              label: "Our Promise",
+              title: "Your Industry. Our Expertise.",
+              body: "Reliable Solutions Since 1983.",
+            },
+          ].map((b) => (
+            <article
+              key={b.label}
+              className="relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-elevated"
+            >
+              <div className="absolute inset-0 grid-blueprint opacity-30" />
+              <div className="relative">
+                <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">{b.label}</div>
+                <h3 className="mt-3 font-display text-xl font-semibold leading-tight">{b.title}</h3>
+                <p className="mt-3 text-sm text-foreground/80 leading-relaxed">{b.body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
 
 
       {/* FOUNDER — featured */}
