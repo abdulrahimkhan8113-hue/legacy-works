@@ -31,9 +31,9 @@ function AboutPage() {
   return (
     <div className="pt-32 pb-24">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-center sm:text-left">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Our Story</div>
-          <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Delivering Industrial Solutions Since 1983.
           </h1>
           <div className="mt-6 space-y-5 text-base text-foreground/80 sm:text-lg">
@@ -44,7 +44,7 @@ function AboutPage() {
               We understand that every industrial facility depends on efficiency, safety, and uninterrupted operations. That's why we deliver solutions that minimize energy loss, improve system performance, and ensure long-term reliability. Our work goes beyond insulation—we help industries operate smarter, safer, and more efficiently.
             </p>
             <p>
-              Over the past four decades, Tayeb &amp; Company has earned the trust of industrial clients by consistently delivering quality workmanship, technical expertise, and dependable service. From Hot Insulation and Cold Insulation to Industrial Duct Work, Valve Box, Flange Box, and Motor Cover Fabrication, every solution is engineered to meet the highest standards of performance.
+              Over 44+ years, Tayeb &amp; Company has earned the trust of industrial clients by consistently delivering quality workmanship, technical expertise, and dependable service. From Hot Insulation and Cold Insulation to Industrial Duct Work, Valve Box, Flange Box, and Motor Cover Fabrication, every solution is engineered to meet the highest standards of performance.
             </p>
             <p>
               With 1,000+ successfully completed projects across 80+ cities in Pakistan, we continue to support industries including power, cement, fertilizer, chemical, textile, food processing, pharmaceuticals, and manufacturing.
