@@ -4,18 +4,18 @@ import { Compass, Target } from "lucide-react";
 export function MissionVision() {
   const blocks = [
     {
-      icon: Compass,
-      label: "Vision",
-      title: "The cornerstone of Pakistan's industrial infrastructure.",
-      body:
-        "To be the cornerstone of Pakistan's industrial infrastructure, setting the gold standard for thermal precision and climate control through a legacy of trust and engineering innovation.",
-    },
-    {
       icon: Target,
       label: "Mission",
-      title: "44+ years of expertise, applied to every sub-task.",
+      title: "Pakistan's most trusted industrial insulation & fabrication partner.",
       body:
-        "Building trust since 1983, Tayeb & Company is dedicated to delivering specialized, large-scale HVAC and thermal insulation solutions across Pakistan. By meticulously managing every technical sub-task with 44+ years of expertise, we safeguard our clients' assets and optimize energy efficiency for a sustainable future.",
+        "To be Pakistan's most trusted industrial insulation and fabrication partner by delivering innovative, reliable, and cost-effective solutions that enhance efficiency, safety, and sustainability.",
+    },
+    {
+      icon: Compass,
+      label: "Vision",
+      title: "Setting the benchmark for excellence.",
+      body:
+        "To set the benchmark for excellence in industrial insulation and fabrication, empowering industries with world-class solutions that drive progress and long-term success.",
     },
   ];
 
