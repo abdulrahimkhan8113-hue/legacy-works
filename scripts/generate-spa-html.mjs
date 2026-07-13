@@ -57,6 +57,9 @@ ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <scr
 `;
 
 writeFileSync(join(clientDir, "index.html"), html, "utf8");
+writeFileSync(join(clientDir, "404.html"), html, "utf8");
+writeFileSync(join(clientDir, ".nojekyll"), "", "utf8");
+writeFileSync(join(clientDir, "CNAME"), "tayebcompany.com\n", "utf8");
 console.log(`[spa-html] Wrote ${join(clientDir, "index.html")} (entry=${entryJs}${entryCss ? `, css=${entryCss}` : ""})`);
 
 // Copy public/ assets that the build may not auto-copy (defensive)
