@@ -10,15 +10,21 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    function onDoc(e: MouseEvent) {
-      if (!wrapperRef.current) return;
-      if (!wrapperRef.current.contains(e.target as Node)) {
+    if (!open) return;
+    function onDoc(e: MouseEvent | TouchEvent) {
+      const target = e.target as Node | null;
+      if (!wrapperRef.current || !target) return;
+      if (!wrapperRef.current.contains(target)) {
         setOpen(false);
       }
     }
-    document.addEventListener("click", onDoc);
-    return () => document.removeEventListener("click", onDoc);
-  }, []);
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("touchstart", onDoc, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("touchstart", onDoc);
+    };
+  }, [open]);
 
   const cleaned = phone.replace(/[^0-9]/g, "").replace(/^0/, "");
 
