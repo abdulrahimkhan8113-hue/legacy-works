@@ -7,11 +7,14 @@ import { contact } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Tayeb & Company" },
-      { name: "description", content: "Talk to Pakistan's industrial insulation specialists. Based in Multan, serving nationwide." },
-      { property: "og:title", content: "Contact Tayeb & Company" },
+      { title: "Contact Tayeb & Company — Request Industrial Insulation Quote" },
+      { name: "description", content: "Contact Pakistan's industrial insulation and HVAC specialists. Based in Multan, serving nationwide. Request a project quote today." },
+      { property: "og:title", content: "Contact Tayeb & Company — Request Industrial Insulation Quote" },
       { property: "og:description", content: "Reach our engineering team to scope your next thermal insulation or HVAC project." },
+      { property: "og:url", content: "https://tayebcompany.com/contact" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/contact" }],
   }),
   component: ContactPage,
 });
