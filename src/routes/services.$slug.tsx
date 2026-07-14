@@ -8,18 +8,23 @@ export const Route = createFileRoute("/services/$slug")({
     if (!service) throw notFound();
     return { service };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const s = loaderData?.service;
+    const url = `https://tayebcompany.com/services/${params.slug}`;
     return {
       meta: s
         ? [
-            { title: `${s.title} — Tayeb & Company` },
+            { title: `${s.title} — Industrial ${s.tagline} | Tayeb & Company` },
             { name: "description", content: s.description },
             { property: "og:title", content: `${s.title} — Tayeb & Company` },
             { property: "og:description", content: s.description },
             { property: "og:image", content: s.cover },
+            { property: "og:url", content: url },
+            { property: "og:type", content: "article" },
+            { name: "twitter:image", content: s.cover },
           ]
         : [{ title: "Service — Tayeb & Company" }],
+      links: s ? [{ rel: "canonical", href: url }] : [],
     };
   },
   notFoundComponent: () => (
