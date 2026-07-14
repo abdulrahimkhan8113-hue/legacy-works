@@ -38,7 +38,7 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
   const callHref = `tel:${phone.replace(/\s/g, "")}`;
 
   return (
-    <div ref={wrapperRef} className="fixed bottom-4 right-4 z-50 flex max-w-[calc(100vw-2rem)] items-end sm:bottom-5 sm:right-5">
+    <div ref={wrapperRef} onClick={(e) => e.stopPropagation()} className="fixed bottom-4 right-4 z-50 flex max-w-[calc(100vw-2rem)] items-end sm:bottom-5 sm:right-5">
       {/* Popup container */}
       <div className={`absolute bottom-16 right-0 w-[calc(100vw-2rem)] max-w-[320px] origin-bottom-right transition-all ${open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}>
         <div className="w-full overflow-hidden rounded-lg shadow-2xl">
