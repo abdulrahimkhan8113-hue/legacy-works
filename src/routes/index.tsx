@@ -13,11 +13,14 @@ import { CtaBand } from "@/components/home/cta-band";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tayeb & Company — A Legacy of Precision Since 1983" },
-      { name: "description", content: "Pakistan's leading partner in thermal insulation, HVAC engineering, ductwork and industrial fabrication. 44 years, 1000+ projects delivered. Established 1983, Multan." },
-      { property: "og:title", content: "Tayeb & Company — A Legacy of Precision" },
-      { property: "og:description", content: "44 years of precision thermal insulation and HVAC engineering across Pakistan. 1000+ projects delivered." },
+      { title: "Tayeb & Company — Industrial Insulation & HVAC Since 1983" },
+      { name: "description", content: "Pakistan's leading partner in thermal insulation, HVAC engineering, ductwork and industrial fabrication. 44+ years, 1000+ projects. Established 1983, Multan." },
+      { property: "og:title", content: "Tayeb & Company — Industrial Insulation & HVAC Since 1983" },
+      { property: "og:description", content: "44+ years of precision thermal insulation and HVAC engineering across Pakistan. 1000+ projects delivered." },
+      { property: "og:url", content: "https://tayebcompany.com/" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/" }],
   }),
   component: Index,
 });

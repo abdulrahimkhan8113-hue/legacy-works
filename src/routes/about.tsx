@@ -8,11 +8,14 @@ import { team, governmentRegistration } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Tayeb & Company" },
-      { name: "description", content: "The story, leadership and standards behind Tayeb & Company — building trust since 1983." },
-      { property: "og:title", content: "About Tayeb & Company" },
+      { title: "About Tayeb & Company — Industrial Engineering Since 1983" },
+      { name: "description", content: "44+ years of trust. Meet the leadership, story and standards behind Pakistan's industrial insulation and fabrication specialists." },
+      { property: "og:title", content: "About Tayeb & Company — Industrial Engineering Since 1983" },
       { property: "og:description", content: "Founded 1983. The leadership and legacy behind Pakistan's industrial insulation specialists." },
+      { property: "og:url", content: "https://tayebcompany.com/about" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/about" }],
   }),
   component: AboutPage,
 });

@@ -8,11 +8,14 @@ import { CertificateModal } from "@/components/home/certificates-strip";
 export const Route = createFileRoute("/certificates")({
   head: () => ({
     meta: [
-      { title: "Achievements — Tayeb & Company" },
-      { name: "description", content: "Client-issued achievements documenting Tayeb & Company's insulation, ductwork and HVAC engineering across Pakistan." },
-      { property: "og:title", content: "Achievements — Tayeb & Company" },
+      { title: "Achievements & Client Certifications — Tayeb & Company" },
+      { name: "description", content: "Client-issued achievement letters documenting Tayeb & Company's insulation, ductwork and HVAC engineering across Pakistan since 1983." },
+      { property: "og:title", content: "Achievements & Client Certifications — Tayeb & Company" },
       { property: "og:description", content: "Verified achievement letters from refineries, mills, and chemical plants across Pakistan." },
+      { property: "og:url", content: "https://tayebcompany.com/certificates" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/certificates" }],
   }),
   component: CertificatesPage,
 });

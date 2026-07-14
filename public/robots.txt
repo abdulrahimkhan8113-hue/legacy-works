@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tayebcompany.com/sitemap.xml

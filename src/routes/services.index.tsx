@@ -5,11 +5,14 @@ import { services } from "@/lib/site-data";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services — Tayeb & Company Engineering" },
-      { name: "description", content: "Hot & cold insulation, ductwork, valve & flange boxes, and industrial motor covers — engineered to the Tayeb Standard." },
-      { property: "og:title", content: "Engineering Services — Tayeb & Company" },
+      { title: "Industrial Insulation & HVAC Services — Tayeb & Company" },
+      { name: "description", content: "Hot & cold insulation, HVAC ductwork, valve & flange boxes, and industrial motor covers — engineered to the Tayeb Standard across Pakistan since 1983." },
+      { property: "og:title", content: "Industrial Insulation & HVAC Services — Tayeb & Company" },
       { property: "og:description", content: "Comprehensive thermal insulation and HVAC capabilities across Pakistan." },
+      { property: "og:url", content: "https://tayebcompany.com/services" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/services" }],
   }),
   component: ServicesPage,
 });

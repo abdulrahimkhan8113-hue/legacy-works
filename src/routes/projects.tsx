@@ -7,11 +7,14 @@ import { ProjectModal } from "@/components/project-modal";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Tayeb & Company" },
-      { name: "description", content: "Selected industrial projects across Pakistan delivered by Tayeb & Company." },
-      { property: "og:title", content: "Projects — Tayeb & Company" },
+      { title: "Industrial Projects Portfolio — Tayeb & Company" },
+      { name: "description", content: "Selected industrial insulation, HVAC and fabrication projects delivered across 80+ Pakistani cities by Tayeb & Company." },
+      { property: "og:title", content: "Industrial Projects Portfolio — Tayeb & Company" },
       { property: "og:description", content: "A nationwide portfolio of thermal insulation and HVAC engineering deployments." },
+      { property: "og:url", content: "https://tayebcompany.com/projects" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://tayebcompany.com/projects" }],
   }),
   component: ProjectsPage,
 });
