@@ -85,12 +85,35 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
         </div>
       </div>
 
-      {/* Floating FAB */}
-      <button type="button" onClick={() => setOpen((o) => !o)} aria-label="Open WhatsApp chat" className="shrink-0 rounded-full p-3 shadow-lg" style={{ width: 56, height: 56, background: WHATSAPP_GREEN, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-          <path d="M20.52 3.48A11.77 11.77 0 0012 .7 11.7 11.7 0 003.5 3.5 11.77 11.77 0 00.7 12c0 2.1.55 4.12 1.6 5.9L.5 23.5l5.05-1.33A11.78 11.78 0 0012 23.3c6.5 0 11.8-5.3 11.8-11.8 0-3.16-1.23-6.12-3.48-8.02z" fill="#fff" />
-        </svg>
-      </button>
+      {/* Floating FAB with pulse rings */}
+      <div className="relative">
+        {!open && (
+          <>
+            <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full animate-ping" style={{ background: WHATSAPP_GREEN, opacity: 0.35 }} />
+            <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full animate-ping" style={{ background: WHATSAPP_GREEN, opacity: 0.25, animationDelay: '0.6s' }} />
+          </>
+        )}
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-label={open ? "Close WhatsApp chat" : "Open WhatsApp chat"}
+          aria-expanded={open}
+          className="relative shrink-0 rounded-full p-3 shadow-lg transition-all duration-300 ease-out hover:scale-110 active:scale-90 hover:shadow-2xl"
+          style={{ width: 56, height: 56, background: WHATSAPP_GREEN, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          <span className={`inline-flex items-center justify-center transition-transform duration-300 ease-out ${open ? 'rotate-180 scale-90' : 'rotate-0 scale-100'}`}>
+            {open ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M18 6L6 18M6 6l12 12" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <svg width="26" height="26" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M20.52 3.48A11.77 11.77 0 0012 .7 11.7 11.7 0 003.5 3.5 11.77 11.77 0 00.7 12c0 2.1.55 4.12 1.6 5.9L.5 23.5l5.05-1.33A11.78 11.78 0 0012 23.3c6.5 0 11.8-5.3 11.8-11.8 0-3.16-1.23-6.12-3.48-8.02z" fill="#fff" />
+              </svg>
+            )}
+          </span>
+        </button>
+      </div>
     </div>
   );
 }
