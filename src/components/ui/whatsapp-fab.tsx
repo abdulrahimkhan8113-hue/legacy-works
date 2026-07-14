@@ -10,15 +10,21 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    function onDoc(e: MouseEvent) {
-      if (!wrapperRef.current) return;
-      if (!wrapperRef.current.contains(e.target as Node)) {
+    if (!open) return;
+    function onDoc(e: MouseEvent | TouchEvent) {
+      const target = e.target as Node | null;
+      if (!wrapperRef.current || !target) return;
+      if (!wrapperRef.current.contains(target)) {
         setOpen(false);
       }
     }
-    document.addEventListener("click", onDoc);
-    return () => document.removeEventListener("click", onDoc);
-  }, []);
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("touchstart", onDoc, { passive: true });
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("touchstart", onDoc);
+    };
+  }, [open]);
 
   const cleaned = phone.replace(/[^0-9]/g, "").replace(/^0/, "");
 
@@ -32,7 +38,7 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
   const callHref = `tel:${phone.replace(/\s/g, "")}`;
 
   return (
-    <div ref={wrapperRef} className="fixed bottom-4 right-4 z-50 flex max-w-[calc(100vw-2rem)] items-end sm:bottom-5 sm:right-5">
+    <div ref={wrapperRef} onClick={(e) => e.stopPropagation()} className="fixed bottom-4 right-4 z-50 flex max-w-[calc(100vw-2rem)] items-end sm:bottom-5 sm:right-5">
       {/* Popup container */}
       <div className={`absolute bottom-16 right-0 w-[calc(100vw-2rem)] max-w-[320px] origin-bottom-right transition-all ${open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"}`}>
         <div className="w-full overflow-hidden rounded-lg shadow-2xl">
