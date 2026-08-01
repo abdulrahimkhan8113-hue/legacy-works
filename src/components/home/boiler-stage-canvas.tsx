@@ -19,7 +19,7 @@ function Pipe({ stage, wool, autoRotate }: { stage: Stage; wool: Wool; autoRotat
     () => ({
       steel: new THREE.MeshStandardMaterial({ color: "#7d8794", metalness: 0.95, roughness: 0.22 }),
       primer: new THREE.MeshStandardMaterial({ color: "#a14a23", metalness: 0.4, roughness: 0.7 }),
-      rock: new THREE.MeshStandardMaterial({ color: "#8b5a2b", metalness: 0.05, roughness: 0.95 }),
+      rock: new THREE.MeshStandardMaterial({ color: "#8a7a55", metalness: 0.04, roughness: 0.98 }),
       glass: new THREE.MeshStandardMaterial({ color: "#e6c64b", metalness: 0.05, roughness: 0.9 }),
       cladding: new THREE.MeshStandardMaterial({ color: "#d2dbe4", metalness: 0.95, roughness: 0.16 }),
       band: new THREE.MeshStandardMaterial({ color: "#9aa6b2", metalness: 0.95, roughness: 0.18 }),
