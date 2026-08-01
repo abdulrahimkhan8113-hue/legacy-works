@@ -61,8 +61,8 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
           <div style={{ background: '#0b1220' }} className="p-3">
             <div style={{ background: WHATSAPP_TEXT_BG }} className="p-3 rounded-md text-sm text-white leading-relaxed">
               <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                ref={textRef}
+                defaultValue={initialMessage}
                 rows={4}
                 className="w-full resize-none bg-transparent text-sm outline-none"
                 aria-label="Message"
