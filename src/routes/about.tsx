@@ -3,10 +3,10 @@ import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "luci
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
-import directorShan from "@/assets/director-shan.png.asset.json";
-import mgrMuzammil from "@/assets/mgr-muzammil.png.asset.json";
-import mgrMohib from "@/assets/mgr-mohib.png.asset.json";
-import engAbdul from "@/assets/eng-abdul-samad.png.asset.json";
+import directorShan from "@/assets/director-shan.jpg";
+import mgrMuzammil from "@/assets/mgr-muzammil.jpg";
+import mgrMohib from "@/assets/mgr-mohib.jpg";
+import engAbdul from "@/assets/eng-abdul-samad.jpg";
 import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
