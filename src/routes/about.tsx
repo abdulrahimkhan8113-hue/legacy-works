@@ -149,13 +149,14 @@ function AboutPage() {
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           {[ceoMember, directorMember].filter(Boolean).map((m) => (
             <article key={m!.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
-              <div className="relative aspect-[3/4] overflow-hidden bg-secondary sm:aspect-[4/5]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary sm:aspect-[3/2]">
                 <img
                   src={portraits[m!.name]}
                   alt={m!.name}
-                  className="img-enhanced h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="img-enhanced h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               <div className="p-7">
