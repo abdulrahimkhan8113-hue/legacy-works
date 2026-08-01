@@ -3,6 +3,10 @@ import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "luci
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
+import directorShan from "@/assets/director-shan.png.asset.json";
+import mgrMuzammil from "@/assets/mgr-muzammil.png.asset.json";
+import mgrMohib from "@/assets/mgr-mohib.png.asset.json";
+import engAbdul from "@/assets/eng-abdul-samad.png.asset.json";
 import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
@@ -23,13 +27,21 @@ export const Route = createFileRoute("/about")({
 const portraits: Record<string, string> = {
   "Zulfiqar Ali Qureshi (Late)": founder,
   "Shamas Tayeb": ceo,
+  "Shan Zulfiqar": directorShan.url,
   "Muhammad Nasir Farooq": gm,
+  "Muzammil Sagar": mgrMuzammil.url,
+  "Mohib Zulfiqar": mgrMohib.url,
+  "Abdul Samad": engAbdul.url,
 };
 
 function AboutPage() {
   const founderMember = team.find((m) => m.role === "Founder");
   const ceoMember = team.find((m) => m.role === "Chief Executive Officer");
-  const gmMember = team.find((m) => m.role === "General Manager");
+  const directorMember = team.find((m) => m.role === "Director");
+  const teamMembers = team.filter((m) =>
+    ["General Manager", "Account Manager", "Operations Manager", "Mechanical Engineer"].includes(m.role),
+  );
+
 
   return (
     <div className="pt-32 pb-24">
@@ -129,13 +141,13 @@ function AboutPage() {
         </section>
       )}
 
-      {/* CEO + MD / GM */}
+      {/* CEO + DIRECTOR */}
       <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Leadership Today</div>
         <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">Stewards of the standard.</h2>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {[ceoMember, gmMember].filter(Boolean).map((m) => (
+          {[ceoMember, directorMember].filter(Boolean).map((m) => (
             <article key={m!.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
               <div className="relative aspect-[3/4] overflow-hidden bg-secondary sm:aspect-[4/5]">
                 <img
@@ -147,9 +159,7 @@ function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               <div className="p-7">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-copper">
-                  {m!.role === "General Manager" ? "Managing Director" : m!.role}
-                </div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-copper">{m!.role}</div>
                 <h3 className="mt-2 font-display text-2xl font-semibold">{m!.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-foreground/75">{m!.bio}</p>
                 <blockquote className="mt-5 border-l-2 border-copper/50 pl-4 text-sm italic text-foreground/80">
@@ -162,6 +172,33 @@ function AboutPage() {
           ))}
         </div>
       </section>
+
+      {/* MEET OUR TEAM */}
+      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Meet Our Team</div>
+        <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">The people behind every project.</h2>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {teamMembers.map((m) => (
+            <article key={m.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
+              <div className="relative aspect-square overflow-hidden bg-secondary">
+                <img
+                  src={portraits[m.name]}
+                  alt={`${m.name} — ${m.role}, Tayeb & Company`}
+                  className="img-enhanced h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-copper">{m.role}</div>
+                <h3 className="mt-1.5 font-display text-lg font-semibold leading-tight">{m.name}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-foreground/70">{m.bio}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
 
       {/* GOVERNMENT / TAX REGISTRATION */}
       <section className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8">
