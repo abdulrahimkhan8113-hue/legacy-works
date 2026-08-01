@@ -3,6 +3,10 @@ import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "luci
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
+import directorShan from "@/assets/director-shan.png.asset.json";
+import mgrMuzammil from "@/assets/mgr-muzammil.png.asset.json";
+import mgrMohib from "@/assets/mgr-mohib.png.asset.json";
+import engAbdul from "@/assets/eng-abdul-samad.png.asset.json";
 import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
@@ -23,13 +27,21 @@ export const Route = createFileRoute("/about")({
 const portraits: Record<string, string> = {
   "Zulfiqar Ali Qureshi (Late)": founder,
   "Shamas Tayeb": ceo,
+  "Shan Zulfiqar": directorShan.url,
   "Muhammad Nasir Farooq": gm,
+  "Muzammil Sagar": mgrMuzammil.url,
+  "Mohib Zulfiqar": mgrMohib.url,
+  "Abdul Samad": engAbdul.url,
 };
 
 function AboutPage() {
   const founderMember = team.find((m) => m.role === "Founder");
   const ceoMember = team.find((m) => m.role === "Chief Executive Officer");
-  const gmMember = team.find((m) => m.role === "General Manager");
+  const directorMember = team.find((m) => m.role === "Director");
+  const teamMembers = team.filter((m) =>
+    ["General Manager", "Account Manager", "Operations Manager", "Mechanical Engineer"].includes(m.role),
+  );
+
 
   return (
     <div className="pt-32 pb-24">
