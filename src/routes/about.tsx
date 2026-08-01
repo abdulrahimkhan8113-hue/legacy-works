@@ -27,11 +27,11 @@ export const Route = createFileRoute("/about")({
 const portraits: Record<string, string> = {
   "Zulfiqar Ali Qureshi (Late)": founder,
   "Shamas Tayeb": ceo,
-  "Shan Zulfiqar": directorShan.url,
+  "Shan Zulfiqar": directorShan,
   "Muhammad Nasir Farooq": gm,
-  "Muzammil Sagar": mgrMuzammil.url,
-  "Mohib Zulfiqar": mgrMohib.url,
-  "Abdul Samad": engAbdul.url,
+  "Muzammil Sagar": mgrMuzammil,
+  "Mohib Zulfiqar": mgrMohib,
+  "Abdul Samad": engAbdul,
 };
 
 function AboutPage() {
