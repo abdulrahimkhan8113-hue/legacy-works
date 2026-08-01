@@ -6,8 +6,8 @@ const WHATSAPP_TEXT_BG = "#111827"; // dark bubble background similar to screens
 
 export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi Tayeb & Company! I want to inquire about a project. OR Type your message here." }: { phone?: string; initialMessage?: string }) {
   const [open, setOpen] = useState(false);
-  const [message, setMessage] = useState(initialMessage);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const textRef = useRef<HTMLTextAreaElement | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -29,7 +29,7 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
   const cleaned = phone.replace(/[^0-9]/g, "").replace(/^0/, "");
 
   function send() {
-    const encoded = encodeURIComponent(message);
+    const encoded = encodeURIComponent(textRef.current?.value ?? initialMessage);
     const url = `https://wa.me/92${cleaned}?text=${encoded}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setOpen(false);
@@ -61,8 +61,8 @@ export function WhatsappFAB({ phone = "03006346506", initialMessage = "👋 Hi T
           <div style={{ background: '#0b1220' }} className="p-3">
             <div style={{ background: WHATSAPP_TEXT_BG }} className="p-3 rounded-md text-sm text-white leading-relaxed">
               <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                ref={textRef}
+                defaultValue={initialMessage}
                 rows={4}
                 className="w-full resize-none bg-transparent text-sm outline-none"
                 aria-label="Message"

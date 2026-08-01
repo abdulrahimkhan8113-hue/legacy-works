@@ -3,10 +3,10 @@ import { ShieldCheck, FileText, Landmark, Hash, Calendar, Building2 } from "luci
 import founder from "@/assets/founder-zulfiqar.png";
 import ceo from "@/assets/ceo-shamas.png";
 import gm from "@/assets/gm-nasir.png";
-import directorShan from "@/assets/director-shan.png.asset.json";
-import mgrMuzammil from "@/assets/mgr-muzammil.png.asset.json";
-import mgrMohib from "@/assets/mgr-mohib.png.asset.json";
-import engAbdul from "@/assets/eng-abdul-samad.png.asset.json";
+import directorShan from "@/assets/director-shan.jpg";
+import mgrMuzammil from "@/assets/mgr-muzammil.jpg";
+import mgrMohib from "@/assets/mgr-mohib.jpg";
+import engAbdul from "@/assets/eng-abdul-samad.jpg";
 import { team, governmentRegistration } from "@/lib/site-data";
 
 export const Route = createFileRoute("/about")({
@@ -27,11 +27,11 @@ export const Route = createFileRoute("/about")({
 const portraits: Record<string, string> = {
   "Zulfiqar Ali Qureshi (Late)": founder,
   "Shamas Tayeb": ceo,
-  "Shan Zulfiqar": directorShan.url,
+  "Shan Zulfiqar": directorShan,
   "Muhammad Nasir Farooq": gm,
-  "Muzammil Sagar": mgrMuzammil.url,
-  "Mohib Zulfiqar": mgrMohib.url,
-  "Abdul Samad": engAbdul.url,
+  "Muzammil Sagar": mgrMuzammil,
+  "Mohib Zulfiqar": mgrMohib,
+  "Abdul Samad": engAbdul,
 };
 
 function AboutPage() {
@@ -149,13 +149,14 @@ function AboutPage() {
         <div className="mt-10 grid gap-8 md:grid-cols-2">
           {[ceoMember, directorMember].filter(Boolean).map((m) => (
             <article key={m!.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
-              <div className="relative aspect-[3/4] overflow-hidden bg-secondary sm:aspect-[4/5]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary sm:aspect-[3/2]">
                 <img
                   src={portraits[m!.name]}
                   alt={m!.name}
-                  className="img-enhanced h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="img-enhanced h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               <div className="p-7">
