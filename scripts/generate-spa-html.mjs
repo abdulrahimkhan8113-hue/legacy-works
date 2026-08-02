@@ -49,13 +49,27 @@ const html = `<!doctype html>
     <meta property="og:site_name" content="Tayeb & Company" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta property="og:image" content="https://tayebcompany.com/og-image.jpg" />
+    <meta name="twitter:image" content="https://tayebcompany.com/og-image.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" />
 ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <script type="module" crossorigin src="/${entryJs}"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <header><a href="/">Tayeb &amp; Company</a></header>
+      <main>
+        <h1>Tayeb &amp; Company — Industrial Insulation &amp; HVAC Since 1983</h1>
+        <p>Pakistan's trusted partner for hot insulation, cold insulation, industrial duct work, valve box fabrication, flange box fabrication and motor covers.</p>
+        <p>Building trust since 1983 with more than 1,000 industrial projects delivered across Pakistan.</p>
+        <nav aria-label="Services">
+          <a href="/about">About Us</a> · <a href="/services">Services</a> · <a href="/projects">Projects</a> · <a href="/certificates">Achievements</a> · <a href="/contact">Contact</a>
+        </nav>
+      </main>
+    </div>
   </body>
 </html>
 `;
