@@ -384,7 +384,7 @@ export const cities = [
 export const team = [
   { name: "Zulfiqar Ali Qureshi (Late)", role: "Founder", bio: "Established Tayeb & Company in 1983 with a singular standard of precision." },
   { name: "Shamas Tayeb", role: "Chief Executive Officer", bio: "Stewards the Tayeb legacy into a new era of nationwide engineering excellence." },
-  { name: "Shan Zulfiqar", role: "Director", bio: "Leads company direction and client partnerships with 44+ years of cumulative expertise behind him." },
+  { name: "Shan Zulfiqar", role: "Chief Operating Officer", bio: "Leads company operations and client partnerships while upholding the Tayeb Standard across every project." },
   { name: "Muhammad Nasir Farooq", role: "General Manager", bio: "Leads field operations across Pakistan, ensuring every site meets the Tayeb Standard." },
   { name: "Muzammil Sagar", role: "Account Manager", bio: "Manages accounts, billing and client documentation across nationwide contracts." },
   { name: "Mohib Zulfiqar", role: "Operations Manager", bio: "Coordinates crews, materials and schedules to keep every project on time." },

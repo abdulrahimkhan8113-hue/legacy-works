@@ -74,7 +74,11 @@ export const Route = createRootRoute({
             addressCountry: "PK",
           },
           areaServed: "PK",
-          sameAs: [],
+          sameAs: [
+            "https://www.instagram.com/tayebcompany",
+            "https://www.facebook.com/share/19TbvdWY1H/",
+            "https://share.google/tcGGF6TItuaVMfEwO",
+          ],
         }),
       },
     ],

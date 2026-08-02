@@ -37,7 +37,7 @@ const portraits: Record<string, string> = {
 function AboutPage() {
   const founderMember = team.find((m) => m.role === "Founder");
   const ceoMember = team.find((m) => m.role === "Chief Executive Officer");
-  const directorMember = team.find((m) => m.role === "Director");
+  const operatingOfficerMember = team.find((m) => m.role === "Chief Operating Officer");
   const teamMembers = team.filter((m) =>
     ["General Manager", "Account Manager", "Operations Manager", "Mechanical Engineer"].includes(m.role),
   );
@@ -141,18 +141,18 @@ function AboutPage() {
         </section>
       )}
 
-      {/* CEO + DIRECTOR */}
+      {/* CEO + CHIEF OPERATING OFFICER */}
       <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-xs font-semibold uppercase tracking-[0.3em] text-copper">Leadership Today</div>
         <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight">Stewards of the standard.</h2>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {[ceoMember, directorMember].filter(Boolean).map((m) => (
-            <article key={m!.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
-              <div className="relative aspect-[4/3] overflow-hidden bg-secondary sm:aspect-[3/2]">
+          {[ceoMember, operatingOfficerMember].map((member) => member ? (
+            <article key={member.name} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-elevated transition-all hover:border-copper/50 hover:shadow-glow">
+              <div className="relative aspect-square overflow-hidden bg-secondary sm:aspect-[5/4]">
                 <img
-                  src={portraits[m!.name]}
-                  alt={m!.name}
+                  src={portraits[member.name]}
+                  alt={`${member.name} — ${member.role}, Tayeb & Company`}
                   className="img-enhanced h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -160,17 +160,17 @@ function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               <div className="p-7">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-copper">{m!.role}</div>
-                <h3 className="mt-2 font-display text-2xl font-semibold">{m!.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/75">{m!.bio}</p>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-copper">{member.role}</div>
+                <h3 className="mt-2 font-display text-2xl font-semibold">{member.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/75">{member.bio}</p>
                 <blockquote className="mt-5 border-l-2 border-copper/50 pl-4 text-sm italic text-foreground/80">
-                  {m!.role === "Chief Executive Officer"
+                  {member.role === "Chief Executive Officer"
                     ? "“We carry 44+ years of trust into every new project — modernised, but never compromised.”"
                     : "“Our field teams are the front line of the Tayeb Standard — discipline, every day, on every site.”"}
                 </blockquote>
               </div>
             </article>
-          ))}
+          ) : null)}
         </div>
       </section>
 

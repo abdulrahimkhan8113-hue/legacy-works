@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone, Search } from "lucide-react";
 import { contact, services } from "@/lib/site-data";
 import logo from "@/assets/logo-tayeb.png";
 import WhatsappFAB from "@/components/ui/whatsapp-fab";
@@ -21,6 +21,25 @@ export function SiteFooter() {
             <p className="mt-6 font-serif-elegant text-lg leading-snug text-foreground/90">
               "{contact.tagline}"
             </p>
+            <div className="mt-5 flex items-center gap-2" aria-label="Tayeb & Company social profiles">
+              {[
+                { href: "https://www.instagram.com/tayebcompany?igsh=YjFwODJpb2VrZ3dn&utm_source=qr", label: "Instagram", Icon: Instagram },
+                { href: "https://www.facebook.com/share/19TbvdWY1H/", label: "Facebook", Icon: Facebook },
+                { href: "https://share.google/tcGGF6TItuaVMfEwO", label: "Google", Icon: Search },
+              ].map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  title={label}
+                  className="grid h-10 w-10 place-items-center rounded-md border border-border bg-card text-foreground/70 transition-colors hover:border-copper/60 hover:text-copper"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>

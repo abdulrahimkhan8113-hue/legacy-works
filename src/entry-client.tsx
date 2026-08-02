@@ -6,7 +6,10 @@ import "./styles.css";
 
 const router = getRouter();
 
-const rootElement = document.getElementById("root")!;
+const rootElement = document.getElementById("root");
+if (!rootElement) {
+  throw new Error("Application root element was not found");
+}
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
