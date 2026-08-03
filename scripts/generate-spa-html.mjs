@@ -60,15 +60,17 @@ ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <scr
   </head>
   <body>
     <div id="root">
-      <header><a href="/">Tayeb &amp; Company</a></header>
-      <main>
-        <h1>Tayeb &amp; Company — Industrial Insulation &amp; HVAC Since 1983</h1>
-        <p>Pakistan's trusted partner for hot insulation, cold insulation, industrial duct work, valve box fabrication, flange box fabrication and motor covers.</p>
-        <p>Building trust since 1983 with more than 1,000 industrial projects delivered across Pakistan.</p>
-        <nav aria-label="Services">
-          <a href="/about">About Us</a> · <a href="/services">Services</a> · <a href="/projects">Projects</a> · <a href="/certificates">Achievements</a> · <a href="/contact">Contact</a>
-        </nav>
-      </main>
+      <div id="prerender-seo" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">
+        <header><a href="/">Tayeb &amp; Company</a></header>
+        <main>
+          <h1>Tayeb &amp; Company — Industrial Insulation &amp; HVAC Since 1983</h1>
+          <p>Pakistan's trusted partner for hot insulation, cold insulation, industrial duct work, valve box fabrication, flange box fabrication and motor covers.</p>
+          <p>Building trust since 1983 with more than 1,000 industrial projects delivered across Pakistan.</p>
+          <nav aria-label="Services">
+            <a href="/about">About Us</a> · <a href="/services">Services</a> · <a href="/projects">Projects</a> · <a href="/certificates">Achievements</a> · <a href="/contact">Contact</a>
+          </nav>
+        </main>
+      </div>
     </div>
   </body>
 </html>
