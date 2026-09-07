@@ -103,6 +103,7 @@ export function SiteHeader() {
           </div>
 
           {[
+            { to: "/products" as const, label: "Products" },
             { to: "/projects" as const, label: "Projects" },
             { to: "/certificates" as const, label: "Achievements" },
             { to: "/about" as const, label: "About Us" },
