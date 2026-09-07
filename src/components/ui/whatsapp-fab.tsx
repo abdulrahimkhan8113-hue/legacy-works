@@ -1,8 +1,9 @@
+import { WHATSAPP_PHONE, whatsappLink } from "@/lib/whatsapp";
+
 const WHATSAPP_GREEN = "#25D366";
 
-export function WhatsappFAB({ phone = "03006346506" }: { phone?: string }) {
-  const cleaned = phone.replace(/[^0-9]/g, "").replace(/^0/, "");
-  const whatsappHref = `https://wa.me/92${cleaned}`;
+export function WhatsappFAB({ phone = WHATSAPP_PHONE }: { phone?: string }) {
+  const whatsappHref = whatsappLink("your insulation products and services", phone);
 
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-[calc(100vw-2rem)] sm:bottom-5 sm:right-5">
