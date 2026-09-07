@@ -66,6 +66,7 @@ function Index() {
       <StatsBand />
       <ServicesCarousel />
       <BoilerShowcase />
+      <FeaturedProducts />
       <FeaturedProjects />
       <ProjectPulse />
       <CertificatesStrip />
