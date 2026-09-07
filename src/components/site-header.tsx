@@ -174,6 +174,7 @@ export function SiteHeader() {
               </div>
             )}
 
+            <Link to="/products" onClick={() => setOpen(false)} className="rounded-md px-2 py-3 text-sm font-medium text-foreground hover:bg-accent/10">Products</Link>
             <Link to="/projects" onClick={() => setOpen(false)} className="rounded-md px-2 py-3 text-sm font-medium text-foreground hover:bg-accent/10">Projects</Link>
             <Link to="/certificates" onClick={() => setOpen(false)} className="rounded-md px-2 py-3 text-sm font-medium text-foreground hover:bg-accent/10">Achievements</Link>
             <Link to="/about" onClick={() => setOpen(false)} className="rounded-md px-2 py-3 text-sm font-medium text-foreground hover:bg-accent/10">About Us</Link>
