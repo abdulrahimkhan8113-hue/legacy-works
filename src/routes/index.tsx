@@ -9,6 +9,7 @@ import { ProjectPulse } from "@/components/home/project-pulse";
 import { CertificatesStrip } from "@/components/home/certificates-strip";
 import { MissionVision } from "@/components/home/mission-vision";
 import { CtaBand } from "@/components/home/cta-band";
+import { FeaturedProducts } from "@/components/home/featured-products";
 
 export const Route = createFileRoute("/")({
   head: () => ({
