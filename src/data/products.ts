@@ -341,7 +341,7 @@ export const products: Product[] = [
     categories: ["Hardware & Accessories"],
     overview:
       "Heavy-duty canvas cloth designed for HVAC duct insulation, providing reinforcement, surface protection and a neat finished appearance over insulated ductwork.",
-    image: "",
+    image: canvasCloth,
     placeholder: "/images/products/canvas-cloth.jpg",
     variants: [
       {
@@ -349,6 +349,7 @@ export const products: Product[] = [
         slug: "duct-canvas-cloth",
         summary:
           "Heavy-duty woven cotton canvas applied with suitable duct adhesive over rock wool and glass wool duct insulation.",
+        image: canvasCloth,
         specs: [
           { label: "Material", value: "Cotton canvas / duct canvas cloth" },
           { label: "Type", value: "Heavy-duty woven fabric" },
@@ -377,7 +378,7 @@ export const products: Product[] = [
     categories: ["Hardware & Accessories"],
     overview:
       "High-quality aluminium foil tape designed for sealing, joining and protecting insulation materials, providing a durable moisture-resistant and vapour-tight finish.",
-    image: "",
+    image: aluminiumTape,
     placeholder: "/images/products/aluminium-tape.jpg",
     variants: [
       {
@@ -385,6 +386,7 @@ export const products: Product[] = [
         slug: "aluminium-foil-tape",
         summary:
           "Soft annealed aluminium foil with pressure-sensitive adhesive, giving strong adhesion to clean, dry insulation surfaces.",
+        image: aluminiumTape,
         specs: [
           { label: "Material", value: "Soft / annealed aluminium foil" },
           { label: "Adhesive", value: "Pressure-sensitive acrylic / rubber" },
@@ -414,7 +416,7 @@ export const products: Product[] = [
     categories: ["Hardware & Accessories"],
     overview:
       "High-quality stainless steel strip coil, slit to required widths and supplied in continuous coils, together with matching one-piece banding buckles for pipe and duct strapping.",
-    image: "",
+    image: ssStripCoil,
     placeholder: "/images/products/stainless-steel-banding.jpg",
     variants: [
       {
@@ -422,6 +424,7 @@ export const products: Product[] = [
         slug: "ss-strip-coil",
         summary:
           "Corrosion-resistant strip coil for insulation banding, cladding support and general industrial strapping.",
+        image: ssStripCoil,
         specs: [
           { label: "Material", value: "Stainless Steel" },
           { label: "Grades", value: "SS 304 / SS 316 / SS 201" },
@@ -446,6 +449,7 @@ export const products: Product[] = [
         slug: "ss-banding-buckles",
         summary:
           "One-piece formed snap-on / wing-type buckles installed by hand or banding tool, with excellent corrosion resistance.",
+        image: bandingBuckles,
         specs: [
           { label: "Product", value: "Stainless steel banding buckle / clip" },
           { label: "Common Grade", value: "SS 304 (SS 316 optional)" },
@@ -474,7 +478,7 @@ export const products: Product[] = [
     categories: ["Hardware & Accessories"],
     overview:
       "FRP (Fibre Reinforced Plastic) cable tray is a lightweight, corrosion-resistant cable management system suitable for industrial, chemical, marine, outdoor and electrical installations.",
-    image: "",
+    image: frpCableTray,
     placeholder: "/images/products/frp-cable-tray.jpg",
     variants: [
       {
@@ -482,6 +486,7 @@ export const products: Product[] = [
         slug: "frp-grp-cable-tray",
         summary:
           "Available as perforated, ladder, solid bottom and covered trays, with covers, bends and accessories supplied to suit.",
+        image: frpCableTray,
         specs: [
           { label: "Material", value: "Fibre Reinforced Plastic (FRP/GRP)" },
           { label: "Resin", value: "Polyester / Vinyl Ester" },
