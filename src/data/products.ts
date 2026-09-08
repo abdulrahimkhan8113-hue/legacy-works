@@ -218,6 +218,25 @@ export const products: Product[] = [
           "Refractory backup insulation",
         ],
       },
+      {
+        name: "Ceramic Fibre Boards",
+        slug: "ceramic-fibre-boards",
+        summary:
+          "Rigid ceramic fibre boards for high-temperature lining, backup insulation and thermal barriers where a firm, machinable board is required.",
+        image: ceramicWoolBoard,
+        specs: [
+          { label: "Grades", value: "1260 °C and 1425 °C" },
+          { label: "Form", value: "Rigid board" },
+          { label: "Thickness", value: "As per requirement" },
+          { label: "Colour", value: "White" },
+        ],
+        applications: [
+          "Furnace and kiln linings",
+          "Refractory backup insulation",
+          "Thermal barriers and heat shields",
+          "Boiler and heater insulation",
+        ],
+      },
     ],
   },
   {
@@ -235,7 +254,7 @@ export const products: Product[] = [
         slug: "pu-pipe-sections",
         summary:
           "The aluminium foil facing provides a reflective outer surface and acts as a vapour barrier. For chilled-water and refrigeration applications, all longitudinal and circumferential joints should be carefully sealed to prevent moisture penetration and condensation.",
-        image: puPipe,
+        image: puPipeSections,
         specs: [
           { label: "Material", value: "Rigid closed-cell polyurethane foam" },
           { label: "Form", value: "Pre-formed sectional lengths" },
