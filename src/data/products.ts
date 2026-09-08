@@ -5,21 +5,13 @@ import glassWool from "@/assets/product-glass-wool.jpg";
 import glassWoolPipe from "@/assets/product-glass-wool-pipe.jpg";
 import ceramicWool from "@/assets/product-ceramic-wool.jpg";
 import puPipe from "@/assets/product-pu-pipe.jpg";
-import ceramicWoolBoardAsset from "@/assets/products/ceramic-wool-board.asset.json";
-import puPipeSectionsAsset from "@/assets/products/polyurethane-pipe.asset.json";
-import canvasClothAsset from "@/assets/products/canvas-cloth.asset.json";
-import aluminiumTapeAsset from "@/assets/products/aluminium-tape.asset.json";
-import ssStripCoilAsset from "@/assets/products/ss-strip-coil.asset.json";
-import bandingBucklesAsset from "@/assets/products/banding-buckles.asset.json";
-import frpCableTrayAsset from "@/assets/products/frp-cable-tray.asset.json";
-
-const ceramicWoolBoard = ceramicWoolBoardAsset.url;
-const puPipeSections = puPipeSectionsAsset.url;
-const canvasCloth = canvasClothAsset.url;
-const aluminiumTape = aluminiumTapeAsset.url;
-const ssStripCoil = ssStripCoilAsset.url;
-const bandingBuckles = bandingBucklesAsset.url;
-const frpCableTray = frpCableTrayAsset.url;
+import ceramicWoolBoard from "@/assets/product-ceramic-board.jpg";
+import puPipeSections from "@/assets/product-pu-pipe-sections.jpg";
+import canvasCloth from "@/assets/product-canvas-cloth.jpg";
+import aluminiumTape from "@/assets/product-aluminium-tape.jpg";
+import ssStripCoil from "@/assets/product-ss-strip-coil.jpg";
+import bandingBuckles from "@/assets/product-banding-buckles.jpg";
+import frpCableTray from "@/assets/product-frp-cable-tray.jpg";
 
 export type ProductCategory =
   | "Thermal Insulation"
