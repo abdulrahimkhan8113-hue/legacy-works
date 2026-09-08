@@ -5,6 +5,7 @@ import glassWool from "@/assets/product-glass-wool.jpg";
 import glassWoolPipe from "@/assets/product-glass-wool-pipe.jpg";
 import ceramicWool from "@/assets/product-ceramic-wool.jpg";
 import puPipe from "@/assets/product-pu-pipe.jpg";
+import thermapore from "@/assets/product-thermapore.jpg";
 import ceramicWoolBoard from "@/assets/product-ceramic-board.jpg";
 import puPipeSections from "@/assets/product-pu-pipe-sections.jpg";
 import canvasCloth from "@/assets/product-canvas-cloth.jpg";
@@ -275,12 +276,13 @@ export const products: Product[] = [
     categories: ["Thermal Insulation", "Piping Solutions"],
     overview:
       "Thermapore EPS insulation is lightweight, rigid expanded-polystyrene providing effective heat resistance for building, HVAC, roofing, flooring and temperature-controlled applications. Available in multiple densities and thicknesses with customised dimensions.",
-    image: "",
+    image: thermapore,
     placeholder: "/images/products/thermapore.jpg",
     variants: [
       {
         name: "Thermapore EPS Insulation Sheets",
         slug: "thermapore-sheets",
+        image: thermapore,
         summary:
           "Lightweight, easy to cut and install, low moisture absorption and cost-effective — suitable for large-area insulation in multiple densities and thicknesses.",
         specs: [
