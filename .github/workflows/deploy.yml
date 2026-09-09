@@ -6,9 +6,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
+
 
 concurrency:
   group: pages
@@ -32,6 +33,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+      # Fallback: also publish the built site to the gh-pages branch, so the
+      # site works whether Pages is set to "GitHub Actions" or "branch: gh-pages".
+      - name: Publish built site to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          cname: tayebcompany.com
+
 
   deploy:
     needs: build
