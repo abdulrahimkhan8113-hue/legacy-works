@@ -1,6 +1,6 @@
 import { Suspense, useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { ContactShadows, Environment, Html, OrbitControls } from "@react-three/drei";
+import { ContactShadows, Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
 type Stage = "clean" | "wool" | "cladding";
@@ -180,13 +180,14 @@ export function BoilerStageCanvas({ stage, wool, autoRotate }: { stage: Stage; w
         gl.domElement.addEventListener("webglcontextlost", (e) => e.preventDefault());
       }}
     >
-      <ambientLight intensity={0.55} />
-      <directionalLight position={[5, 6, 4]} intensity={1.2} castShadow />
-      <directionalLight position={[-4, 3, -3]} intensity={0.5} color="#5b8def" />
+      <ambientLight intensity={0.85} />
+      <hemisphereLight args={["#dfe7f5", "#2a2f38", 0.7]} />
+      <directionalLight position={[5, 6, 4]} intensity={1.4} castShadow />
+      <directionalLight position={[-4, 3, -3]} intensity={0.6} color="#5b8def" />
+      <pointLight position={[0, 3, 5]} intensity={0.5} />
       <Suspense fallback={<Loader />}>
         <Pipe stage={stage} wool={wool} autoRotate={autoRotate} />
         <ContactShadows position={[0, -1.45, 0]} opacity={0.5} scale={10} blur={2.6} far={3} />
-        <Environment preset="warehouse" />
       </Suspense>
       <OrbitControls
         enablePan={false}

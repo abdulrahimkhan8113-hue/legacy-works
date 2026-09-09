@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MousePointer2, RotateCw, Layers, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { SafeBoundary } from "@/components/safe-boundary";
 
 const BoilerStageCanvas = lazy(async () => {
   const mod = await import("./boiler-stage-canvas");
@@ -207,15 +208,27 @@ export function BoilerShowcase() {
           <div className="relative h-[420px] w-full overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-background via-secondary/40 to-background shadow-elevated sm:h-[540px]">
             <div className="absolute inset-0 grid-blueprint opacity-30" />
             {mounted ? (
-              <Suspense
+              <SafeBoundary
                 fallback={
-                  <div className="flex h-full items-center justify-center text-xs text-muted-foreground">
-                    Loading 3D model…
+                  <div className="flex h-full flex-col items-center justify-center gap-2 px-6 text-center">
+                    <Layers className="h-6 w-6 text-copper" />
+                    <div className="text-sm font-semibold text-foreground">
+                      Step {active.index} · {active.title}
+                    </div>
+                    <p className="max-w-xs text-xs text-muted-foreground">{active.detail}</p>
                   </div>
                 }
               >
-                <BoilerStageCanvas stage={active.key} wool={woolChoice} autoRotate={autoRotate} />
-              </Suspense>
+                <Suspense
+                  fallback={
+                    <div className="flex h-full items-center justify-center text-xs text-muted-foreground">
+                      Loading 3D model…
+                    </div>
+                  }
+                >
+                  <BoilerStageCanvas stage={active.key} wool={woolChoice} autoRotate={autoRotate} />
+                </Suspense>
+              </SafeBoundary>
             ) : (
               <div className="flex h-full items-center justify-center text-xs text-muted-foreground">
                 Loading 3D model…
