@@ -1,0 +1,355 @@
+{
+  "/home/runner/work/legacy-works/legacy-works/src/styles.css": {
+    "file": "assets/styles-CNGJamY3.css",
+    "src": "/home/runner/work/legacy-works/legacy-works/src/styles.css"
+  },
+  "index.html": {
+    "file": "assets/index-BP0sfEQ1.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/components/home/boiler-stage-canvas.tsx"
+    ],
+    "css": [
+      "assets/styles-CNGJamY3.css"
+    ],
+    "assets": [
+      "assets/logo-tayeb-zCVlQBp3.png",
+      "assets/project-ductwork-B_t64viV.jpg",
+      "assets/project-boiler-blue-CroQBtDQ.jpg",
+      "assets/project-boiler-silver-DMWhi7Ty.jpg",
+      "assets/project-hot-insulation-CcXyAdQK.jpg",
+      "assets/project-orange-vessel-BzUFael5.jpg",
+      "assets/project-piping-DhAfXBqR.jpg",
+      "assets/AB-af-KfKuF.jpg",
+      "assets/atta-9iTTZ_P4.jpg",
+      "assets/faisal-BenlK8EE.jpg",
+      "assets/sabir-Ffiin4_b.jpg",
+      "assets/safiaRice-B6sHArc9.jpg",
+      "assets/petroin-DZ0n1VPt.jpg",
+      "assets/motor1-BGl2qduh.jpg",
+      "assets/motor2-sWrLdqns.jpg",
+      "assets/motor3-B_Afj5v4.jpg",
+      "assets/motor4-DGZWkLJK.jpg",
+      "assets/motor5-Gkk3QFwY.jpg",
+      "assets/cold1-DU08kG9m.jpg",
+      "assets/cold2-CArWcEWy.jpg",
+      "assets/duct1-DDHW6ckX.jpg",
+      "assets/duct2-D_o04A1I.jpg",
+      "assets/duct3-CXEt5DR_.jpg",
+      "assets/Flange1-VXZQEWGw.jpg",
+      "assets/flange2-TGSI3F2V.jpg",
+      "assets/flange3-BuHuvaBX.jpg",
+      "assets/Valve1-CYgfMU9F.jpg",
+      "assets/Valve2-CO-DQWsR.jpg",
+      "assets/Valve3-0kvH80Ot.jpg",
+      "assets/Valve4-C-Ob5wPl.jpg",
+      "assets/legacy-chirat-cement-1984-RdNTDT72.jpg",
+      "assets/legacy-kohinoor-power-B7isAAEg.jpg",
+      "assets/legacy-parco-refinery-1999-Cy1X0ve8.jpg",
+      "assets/portqasim-Bz4qNNdc.jpg",
+      "assets/cert-ha-lubricants-TrBm7F6k.jpg",
+      "assets/cert-hafeez-ghee-CSmuZzjc.jpg",
+      "assets/cert-faisal-feeds-CgY9NRsz.jpg",
+      "assets/cert-servo-motor-oil-D0Omsimh.jpg",
+      "assets/cert-sabirs-oils-DMU32mh5.jpg",
+      "assets/cert-atta-chemicals-ho-IcvTF.jpg",
+      "assets/cert-safia-rice-TlTXFcmB.jpg",
+      "assets/cert-ntn-fbr-DxugubBP.png",
+      "assets/product-rockwool-blanket-98fFHNkI.jpg",
+      "assets/product-rockwool-pipe-CSvLGXm9.jpg",
+      "assets/product-rockwool-slab-C5-YWasN.jpg",
+      "assets/product-glass-wool-CSK4T8ss.jpg",
+      "assets/product-glass-wool-pipe-D-D6Z6yJ.jpg",
+      "assets/product-ceramic-wool-DT2HAtuJ.jpg",
+      "assets/product-pu-pipe-B7DcJ8Wd.jpg",
+      "assets/product-thermapore-CaTzUR5d.jpg",
+      "assets/product-ceramic-board-CGlEqnT3.jpg",
+      "assets/product-pu-pipe-sections-CcyieGI-.jpg",
+      "assets/product-canvas-cloth-BSrBxyxK.jpg",
+      "assets/product-aluminium-tape-4dG353M8.jpg",
+      "assets/product-ss-strip-coil-DtXtdRt6.jpg",
+      "assets/product-banding-buckles-CaZkrqiC.jpg",
+      "assets/product-frp-cable-tray-0yB-TeGU.jpg",
+      "assets/founder-zulfiqar-Deot5EGq.png",
+      "assets/ceo-shamas-DsVxb4Hz.png",
+      "assets/gm-nasir-D-8u1m88.png",
+      "assets/director-shan-BXfZRkW9.jpg",
+      "assets/mgr-muzammil-KQdNalyz.jpg",
+      "assets/mgr-mohib-Dbu9u-cT.jpg",
+      "assets/eng-abdul-samad-DdzAx-QR.jpg",
+      "assets/hero-industrial-C5l3il58.jpg",
+      "assets/styles-CNGJamY3.css"
+    ]
+  },
+  "src/assets/AB.jpg": {
+    "file": "assets/AB-af-KfKuF.jpg",
+    "src": "src/assets/AB.jpg"
+  },
+  "src/assets/Flange1.jpg": {
+    "file": "assets/Flange1-VXZQEWGw.jpg",
+    "src": "src/assets/Flange1.jpg"
+  },
+  "src/assets/Valve1.jpg": {
+    "file": "assets/Valve1-CYgfMU9F.jpg",
+    "src": "src/assets/Valve1.jpg"
+  },
+  "src/assets/Valve2.jpg": {
+    "file": "assets/Valve2-CO-DQWsR.jpg",
+    "src": "src/assets/Valve2.jpg"
+  },
+  "src/assets/Valve3.jpg": {
+    "file": "assets/Valve3-0kvH80Ot.jpg",
+    "src": "src/assets/Valve3.jpg"
+  },
+  "src/assets/Valve4.jpg": {
+    "file": "assets/Valve4-C-Ob5wPl.jpg",
+    "src": "src/assets/Valve4.jpg"
+  },
+  "src/assets/atta.jpg": {
+    "file": "assets/atta-9iTTZ_P4.jpg",
+    "src": "src/assets/atta.jpg"
+  },
+  "src/assets/ceo-shamas.png": {
+    "file": "assets/ceo-shamas-DsVxb4Hz.png",
+    "src": "src/assets/ceo-shamas.png"
+  },
+  "src/assets/cert-atta-chemicals.jpg": {
+    "file": "assets/cert-atta-chemicals-ho-IcvTF.jpg",
+    "src": "src/assets/cert-atta-chemicals.jpg"
+  },
+  "src/assets/cert-faisal-feeds.jpg": {
+    "file": "assets/cert-faisal-feeds-CgY9NRsz.jpg",
+    "src": "src/assets/cert-faisal-feeds.jpg"
+  },
+  "src/assets/cert-ha-lubricants.jpg": {
+    "file": "assets/cert-ha-lubricants-TrBm7F6k.jpg",
+    "src": "src/assets/cert-ha-lubricants.jpg"
+  },
+  "src/assets/cert-hafeez-ghee.jpg": {
+    "file": "assets/cert-hafeez-ghee-CSmuZzjc.jpg",
+    "src": "src/assets/cert-hafeez-ghee.jpg"
+  },
+  "src/assets/cert-ntn-fbr.png": {
+    "file": "assets/cert-ntn-fbr-DxugubBP.png",
+    "src": "src/assets/cert-ntn-fbr.png"
+  },
+  "src/assets/cert-sabirs-oils.jpg": {
+    "file": "assets/cert-sabirs-oils-DMU32mh5.jpg",
+    "src": "src/assets/cert-sabirs-oils.jpg"
+  },
+  "src/assets/cert-safia-rice.jpg": {
+    "file": "assets/cert-safia-rice-TlTXFcmB.jpg",
+    "src": "src/assets/cert-safia-rice.jpg"
+  },
+  "src/assets/cert-servo-motor-oil.jpg": {
+    "file": "assets/cert-servo-motor-oil-D0Omsimh.jpg",
+    "src": "src/assets/cert-servo-motor-oil.jpg"
+  },
+  "src/assets/cold1.jpg": {
+    "file": "assets/cold1-DU08kG9m.jpg",
+    "src": "src/assets/cold1.jpg"
+  },
+  "src/assets/cold2.jpg": {
+    "file": "assets/cold2-CArWcEWy.jpg",
+    "src": "src/assets/cold2.jpg"
+  },
+  "src/assets/director-shan.jpg": {
+    "file": "assets/director-shan-BXfZRkW9.jpg",
+    "src": "src/assets/director-shan.jpg"
+  },
+  "src/assets/duct1.jpg": {
+    "file": "assets/duct1-DDHW6ckX.jpg",
+    "src": "src/assets/duct1.jpg"
+  },
+  "src/assets/duct2.jpg": {
+    "file": "assets/duct2-D_o04A1I.jpg",
+    "src": "src/assets/duct2.jpg"
+  },
+  "src/assets/duct3.jpg": {
+    "file": "assets/duct3-CXEt5DR_.jpg",
+    "src": "src/assets/duct3.jpg"
+  },
+  "src/assets/eng-abdul-samad.jpg": {
+    "file": "assets/eng-abdul-samad-DdzAx-QR.jpg",
+    "src": "src/assets/eng-abdul-samad.jpg"
+  },
+  "src/assets/faisal.jpg": {
+    "file": "assets/faisal-BenlK8EE.jpg",
+    "src": "src/assets/faisal.jpg"
+  },
+  "src/assets/flange2.jpg": {
+    "file": "assets/flange2-TGSI3F2V.jpg",
+    "src": "src/assets/flange2.jpg"
+  },
+  "src/assets/flange3.jpg": {
+    "file": "assets/flange3-BuHuvaBX.jpg",
+    "src": "src/assets/flange3.jpg"
+  },
+  "src/assets/founder-zulfiqar.png": {
+    "file": "assets/founder-zulfiqar-Deot5EGq.png",
+    "src": "src/assets/founder-zulfiqar.png"
+  },
+  "src/assets/gm-nasir.png": {
+    "file": "assets/gm-nasir-D-8u1m88.png",
+    "src": "src/assets/gm-nasir.png"
+  },
+  "src/assets/hero-industrial.jpg": {
+    "file": "assets/hero-industrial-C5l3il58.jpg",
+    "src": "src/assets/hero-industrial.jpg"
+  },
+  "src/assets/legacy-chirat-cement-1984.jpg": {
+    "file": "assets/legacy-chirat-cement-1984-RdNTDT72.jpg",
+    "src": "src/assets/legacy-chirat-cement-1984.jpg"
+  },
+  "src/assets/legacy-kohinoor-power.jpg": {
+    "file": "assets/legacy-kohinoor-power-B7isAAEg.jpg",
+    "src": "src/assets/legacy-kohinoor-power.jpg"
+  },
+  "src/assets/legacy-parco-refinery-1999.jpg": {
+    "file": "assets/legacy-parco-refinery-1999-Cy1X0ve8.jpg",
+    "src": "src/assets/legacy-parco-refinery-1999.jpg"
+  },
+  "src/assets/logo-tayeb.png": {
+    "file": "assets/logo-tayeb-zCVlQBp3.png",
+    "src": "src/assets/logo-tayeb.png"
+  },
+  "src/assets/mgr-mohib.jpg": {
+    "file": "assets/mgr-mohib-Dbu9u-cT.jpg",
+    "src": "src/assets/mgr-mohib.jpg"
+  },
+  "src/assets/mgr-muzammil.jpg": {
+    "file": "assets/mgr-muzammil-KQdNalyz.jpg",
+    "src": "src/assets/mgr-muzammil.jpg"
+  },
+  "src/assets/motor1.jpg": {
+    "file": "assets/motor1-BGl2qduh.jpg",
+    "src": "src/assets/motor1.jpg"
+  },
+  "src/assets/motor2.jpg": {
+    "file": "assets/motor2-sWrLdqns.jpg",
+    "src": "src/assets/motor2.jpg"
+  },
+  "src/assets/motor3.jpg": {
+    "file": "assets/motor3-B_Afj5v4.jpg",
+    "src": "src/assets/motor3.jpg"
+  },
+  "src/assets/motor4.jpg": {
+    "file": "assets/motor4-DGZWkLJK.jpg",
+    "src": "src/assets/motor4.jpg"
+  },
+  "src/assets/motor5.jpg": {
+    "file": "assets/motor5-Gkk3QFwY.jpg",
+    "src": "src/assets/motor5.jpg"
+  },
+  "src/assets/petroin.jpg": {
+    "file": "assets/petroin-DZ0n1VPt.jpg",
+    "src": "src/assets/petroin.jpg"
+  },
+  "src/assets/portqasim.jpg": {
+    "file": "assets/portqasim-Bz4qNNdc.jpg",
+    "src": "src/assets/portqasim.jpg"
+  },
+  "src/assets/product-aluminium-tape.jpg": {
+    "file": "assets/product-aluminium-tape-4dG353M8.jpg",
+    "src": "src/assets/product-aluminium-tape.jpg"
+  },
+  "src/assets/product-banding-buckles.jpg": {
+    "file": "assets/product-banding-buckles-CaZkrqiC.jpg",
+    "src": "src/assets/product-banding-buckles.jpg"
+  },
+  "src/assets/product-canvas-cloth.jpg": {
+    "file": "assets/product-canvas-cloth-BSrBxyxK.jpg",
+    "src": "src/assets/product-canvas-cloth.jpg"
+  },
+  "src/assets/product-ceramic-board.jpg": {
+    "file": "assets/product-ceramic-board-CGlEqnT3.jpg",
+    "src": "src/assets/product-ceramic-board.jpg"
+  },
+  "src/assets/product-ceramic-wool.jpg": {
+    "file": "assets/product-ceramic-wool-DT2HAtuJ.jpg",
+    "src": "src/assets/product-ceramic-wool.jpg"
+  },
+  "src/assets/product-frp-cable-tray.jpg": {
+    "file": "assets/product-frp-cable-tray-0yB-TeGU.jpg",
+    "src": "src/assets/product-frp-cable-tray.jpg"
+  },
+  "src/assets/product-glass-wool-pipe.jpg": {
+    "file": "assets/product-glass-wool-pipe-D-D6Z6yJ.jpg",
+    "src": "src/assets/product-glass-wool-pipe.jpg"
+  },
+  "src/assets/product-glass-wool.jpg": {
+    "file": "assets/product-glass-wool-CSK4T8ss.jpg",
+    "src": "src/assets/product-glass-wool.jpg"
+  },
+  "src/assets/product-pu-pipe-sections.jpg": {
+    "file": "assets/product-pu-pipe-sections-CcyieGI-.jpg",
+    "src": "src/assets/product-pu-pipe-sections.jpg"
+  },
+  "src/assets/product-pu-pipe.jpg": {
+    "file": "assets/product-pu-pipe-B7DcJ8Wd.jpg",
+    "src": "src/assets/product-pu-pipe.jpg"
+  },
+  "src/assets/product-rockwool-blanket.jpg": {
+    "file": "assets/product-rockwool-blanket-98fFHNkI.jpg",
+    "src": "src/assets/product-rockwool-blanket.jpg"
+  },
+  "src/assets/product-rockwool-pipe.jpg": {
+    "file": "assets/product-rockwool-pipe-CSvLGXm9.jpg",
+    "src": "src/assets/product-rockwool-pipe.jpg"
+  },
+  "src/assets/product-rockwool-slab.jpg": {
+    "file": "assets/product-rockwool-slab-C5-YWasN.jpg",
+    "src": "src/assets/product-rockwool-slab.jpg"
+  },
+  "src/assets/product-ss-strip-coil.jpg": {
+    "file": "assets/product-ss-strip-coil-DtXtdRt6.jpg",
+    "src": "src/assets/product-ss-strip-coil.jpg"
+  },
+  "src/assets/product-thermapore.jpg": {
+    "file": "assets/product-thermapore-CaTzUR5d.jpg",
+    "src": "src/assets/product-thermapore.jpg"
+  },
+  "src/assets/project-boiler-blue.jpg": {
+    "file": "assets/project-boiler-blue-CroQBtDQ.jpg",
+    "src": "src/assets/project-boiler-blue.jpg"
+  },
+  "src/assets/project-boiler-silver.jpg": {
+    "file": "assets/project-boiler-silver-DMWhi7Ty.jpg",
+    "src": "src/assets/project-boiler-silver.jpg"
+  },
+  "src/assets/project-ductwork.jpg": {
+    "file": "assets/project-ductwork-B_t64viV.jpg",
+    "src": "src/assets/project-ductwork.jpg"
+  },
+  "src/assets/project-hot-insulation.jpg": {
+    "file": "assets/project-hot-insulation-CcXyAdQK.jpg",
+    "src": "src/assets/project-hot-insulation.jpg"
+  },
+  "src/assets/project-orange-vessel.jpg": {
+    "file": "assets/project-orange-vessel-BzUFael5.jpg",
+    "src": "src/assets/project-orange-vessel.jpg"
+  },
+  "src/assets/project-piping.jpg": {
+    "file": "assets/project-piping-DhAfXBqR.jpg",
+    "src": "src/assets/project-piping.jpg"
+  },
+  "src/assets/sabir.jpg": {
+    "file": "assets/sabir-Ffiin4_b.jpg",
+    "src": "src/assets/sabir.jpg"
+  },
+  "src/assets/safiaRice.jpg": {
+    "file": "assets/safiaRice-B6sHArc9.jpg",
+    "src": "src/assets/safiaRice.jpg"
+  },
+  "src/components/home/boiler-stage-canvas.tsx": {
+    "file": "assets/boiler-stage-canvas-Nn2Udd8r.js",
+    "name": "boiler-stage-canvas",
+    "src": "src/components/home/boiler-stage-canvas.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  }
+}
