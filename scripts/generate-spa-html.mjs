@@ -60,6 +60,18 @@ ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <scr
   </head>
   <body>
     <div id="root">
+      <div id="startup-recovery" hidden style="box-sizing:border-box;min-height:100vh;padding:64px 24px;background:#101418;color:#f4f4f2;font-family:Arial,sans-serif;text-align:center;">
+        <div style="max-width:680px;margin:0 auto;">
+          <p style="color:#c87332;font-weight:700;text-transform:uppercase;">Tayeb &amp; Company</p>
+          <h1 style="font-size:clamp(32px,7vw,60px);line-height:1.05;margin:20px 0;">Industrial insulation and fabrication since 1983</h1>
+          <p style="color:#c7cbd0;line-height:1.7;">The website could not finish loading. Please refresh once, or continue to our main sections below.</p>
+          <nav style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px;" aria-label="Recovery navigation">
+            <a href="/services" style="color:#fff;background:#b85f25;padding:12px 18px;text-decoration:none;border-radius:4px;">Services</a>
+            <a href="/products" style="color:#fff;border:1px solid #62676d;padding:12px 18px;text-decoration:none;border-radius:4px;">Products</a>
+            <a href="/contact" style="color:#fff;border:1px solid #62676d;padding:12px 18px;text-decoration:none;border-radius:4px;">Contact</a>
+          </nav>
+        </div>
+      </div>
       <div id="prerender-seo" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">
         <header><a href="/">Tayeb &amp; Company</a></header>
         <main>
@@ -72,6 +84,13 @@ ${entryCss ? `    <link rel="stylesheet" href="/${entryCss}" />\n` : ""}    <scr
         </main>
       </div>
     </div>
+    <script>
+      window.setTimeout(function () {
+        var recovery = document.getElementById("startup-recovery");
+        var sourceFallback = document.getElementById("prerender-seo");
+        if (recovery && sourceFallback) recovery.hidden = false;
+      }, 4000);
+    </script>
   </body>
 </html>
 `;
