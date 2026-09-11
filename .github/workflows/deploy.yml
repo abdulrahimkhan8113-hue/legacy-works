@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -23,27 +23,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
       - run: npm install --legacy-peer-deps --include=dev
-      - run: npm run build:vercel
-      - name: SPA fallback (404.html) and CNAME
-        run: |
-          cp dist/index.html dist/404.html
-          echo "tayebcompany.com" > dist/CNAME
-          touch dist/.nojekyll
+      - name: Build and verify deployable website
+        run: npm run build:static
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-      # Fallback: also publish the built site to the gh-pages branch, so the
-      # site works whether Pages is set to "GitHub Actions" or "branch: gh-pages".
-      - name: Publish built site to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          cname: tayebcompany.com
-
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
